@@ -1,5 +1,4 @@
-<h1 align="center">Pedram Gholizadeh (pedralizad)</h1>
-<h3 align="center">a simple web developer who loves WordPress and SEO!</h3>
+
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=pedramgholizadeh&label=Profile%20views&color=0e75b6&style=flat" alt="pedramgholizadeh" /> </p>
 
