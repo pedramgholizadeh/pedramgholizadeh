@@ -1,0 +1,7 @@
+main  , .Box-body , .markdown-body a img {
+    background: #22272e;
+}
+
+.d-none {
+    display: none !important;
+}
