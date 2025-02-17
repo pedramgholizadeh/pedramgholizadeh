@@ -4,6 +4,11 @@
 
 <p align="left"> <a href="https://twitter.com/pedramgholizade" target="blank"><img src="https://img.shields.io/twitter/follow/pedramgholizade?logo=twitter&style=for-the-badge" alt="pedramgholizade" /></a> </p>
 
+
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=pedramgholizadeh&" alt="pedramgholizadeh" /></p>
+
+
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
 
 - 🔭 Project Manager [Webiro Creativity Agency](https://webiro.ir)
@@ -12,15 +17,7 @@
 
 - ☕ Buy me a COFFEE! [Donate](https://daramet.com/pedram)
 
-- 👨‍💻 All of my projects are available at [https://webiro.ir/web-portfolios/](https://webiro.ir/web-portfolios/)
-
-- 📝 I regularly write articles on [https://pedralizad.ir/blog/](https://pedralizad.ir/blog/)
-
-- 💬 Ask me about **WordPress**
-
-- 📫 How to reach me **pedram@skiff.com**
-
-- 📄 Know about my experiences [https://pedralizad.ir](https://pedralizad.ir)
+- 📫 How to reach me **pedram@skiff.com** or **09120894404**
 
 - ⚡ Fun fact **there is NO fun fact about my life :)**
 
@@ -39,17 +36,8 @@
 
 
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=pedramgholizadeh&show_icons=true&locale=en" alt="pedramgholizadeh" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=pedramgholizadeh&" alt="pedramgholizadeh" /></p>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=pedramgholizadeh&label=Profile%20views&color=0e75b6&style=flat" alt="pedramgholizadeh" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=pedramgholizadeh" alt="pedramgholizadeh" /></a> </p>
-
-<p align="left"> <a href="https://twitter.com/pedramgholizade" target="blank"><img src="https://img.shields.io/twitter/follow/pedramgholizade?logo=twitter&style=for-the-badge" alt="pedramgholizade" /></a> </p>
 
 
 
