@@ -1,15 +1,12 @@
 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=pedramgholizadeh&label=Profile%20views&color=0e75b6&style=flat" alt="pedramgholizadeh" /> </p>
-
+<h1>
+Pedram Gholizadeh
+</h1>
 <p align="left"> <a href="https://twitter.com/pedramgholizade" target="blank"><img src="https://img.shields.io/twitter/follow/pedramgholizade?logo=twitter&style=for-the-badge" alt="pedramgholizade" /></a> </p>
 
 
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=pedramgholizadeh&" alt="pedramgholizadeh" /></p>
-
-
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
 
 - 🔭 Project Manager [Webiro Creativity Agency](https://webiro.ir)
 
@@ -21,9 +18,9 @@
 
 - ⚡ Fun fact **there is NO fun fact about my life :)**
 
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
 
 
-<h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://dev.to/pedramgholizadeh" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="pedramgholizadeh" height="30" width="40" /></a>
 <a href="https://twitter.com/pedramgholizade" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="pedramgholizade" height="30" width="40" /></a>
