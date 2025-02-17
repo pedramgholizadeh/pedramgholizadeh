@@ -4,6 +4,8 @@
 
 <p align="left"> <a href="https://twitter.com/pedramgholizade" target="blank"><img src="https://img.shields.io/twitter/follow/pedramgholizade?logo=twitter&style=for-the-badge" alt="pedramgholizade" /></a> </p>
 
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
+
 - 🔭 Project Manager [Webiro Creativity Agency](https://webiro.ir)
 
 - 🌱 I’m currently learning **Everything :D**
@@ -37,17 +39,18 @@
 
 
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
 
-<p>
- __          __                          _      _  __       ______                 _                 
- \ \        / /                         | |    (_)/ _|     |  ____|               | |                
-  \ \  /\  / ___  _ __ ___   ___ _ __   | |     _| |_ ___  | |__ _ __ ___  ___  __| | ___  _ __ ___  
-   \ \/  \/ / _ \| '_ ` _ \ / _ | '_ \  | |    | |  _/ _ \ |  __| '__/ _ \/ _ \/ _` |/ _ \| '_ ` _ \ 
-    \  /\  | (_) | | | | | |  __| | | |_| |____| | ||  __/_| |  | | |  __|  __| (_| | (_) | | | | | |
-     \/  \/ \___/|_| |_| |_|\___|_| |_( |______|_|_| \___( |_|  |_|  \___|\___|\__,_|\___/|_| |_| |_|
-                                      |/                 |/                                          
-                                                                                                     
-</p>
-                                                                                                                                             
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=pedramgholizadeh&show_icons=true&locale=en" alt="pedramgholizadeh" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=pedramgholizadeh&" alt="pedramgholizadeh" /></p>
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=pedramgholizadeh&label=Profile%20views&color=0e75b6&style=flat" alt="pedramgholizadeh" /> </p>
+
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=pedramgholizadeh" alt="pedramgholizadeh" /></a> </p>
+
+<p align="left"> <a href="https://twitter.com/pedramgholizade" target="blank"><img src="https://img.shields.io/twitter/follow/pedramgholizade?logo=twitter&style=for-the-badge" alt="pedramgholizade" /></a> </p>
+
+
+
 
