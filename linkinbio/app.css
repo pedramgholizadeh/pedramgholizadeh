@@ -168,6 +168,15 @@ h1 , h2 , h3 , h4 , h5 , h6 , p , a , div {
     font-size:12px;
     margin-right: 5px;
 }
+.donate h3:after {
+    content: "فرهنگ‌سازی محتوایی";
+    opacity: 0.4;
+    filter: contrast(200%) blur(1px);
+    color:moccasin;
+    z-index: -1;
+    font-size:12px;
+    margin-right: 5px;
+}
 .mg-resume {
     margin-bottom: 0px !important;
 }
