@@ -6,7 +6,9 @@ Pedram Gholizadeh
 </h1>
 <p align="left"> <a href="https://twitter.com/pedramgholizade" target="blank"><img src="https://img.shields.io/twitter/follow/pedramgholizade?logo=twitter&style=for-the-badge" alt="pedramgholizade" /></a> </p>
 
+- 🔭 Personal Web + Resume [Pedram Gholizadeh](https://webiro.ir) 
 
+- 🔭 My Blog [Visit](https://webiro.ir)
 
 - 🔭 Project Manager [Webiro Creativity Agency](https://webiro.ir)
 
