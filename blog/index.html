@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="بلاگ من - بلاگ پدرام قلی زاده">
+    <meta name="title" content="بلاگ پدرام قلی زاده : Pedram Blog 🌐">
+    <meta name="description"
+        content="Pedram Gholizadeh, a skilled developer & SEO enthusiast, crafts custom websites & boosts rankings with clean code & smart strategies.">
+    <meta name="author" content="Pedram Gholizadeh">
+    <!-- Title  -->
+    <title>Blog | بلاگ | PedramGholizadeh</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="../assets/css/plugins.css">
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="themify-icons.css">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "t38m423bl6");
+    </script>
+</head>
+
+<body class="dots-waves">
+    <div class="loader-wrap" style="direction: ltr !important;">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="loader-wrap-heading">
+            <div class="load-text">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+            </div>
+        </div>
+    </div>
+    <!-- ==================== End Loading ==================== -->
+    <div class="cursor"></div>
+    <!-- ==================== Start progress-scroll-button ==================== -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- ==================== End progress-scroll-button ==================== -->
+    <div id="home_wave"></div>
+    <!-- ==================== Start Navbar ==================== -->
+    <!-- ==================== End Navbar ==================== -->
+    <header class="mb-8 text-center">
+        <h1 class="text-3xl font-extrabold text-blue-900">بلاگ شخصی</h1>
+        <p class="text-gray-600 mt-2">اشتراک‌گذاری اندک تجربیات زندگی</p>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <section id="blog-section" class="grid gap-6"></section>
+        </div>
+
+    </div>
+    <script>
+        const API_BASE = "https://webiro.ir/wp-json/wp/v2/posts/";
+        const section = document.getElementById("blog-section");
+
+        // حالت لیست
+        async function loadPosts() {
+            section.innerHTML = "<p class='text-center text-gray-500'>در حال بارگذاری...</p>";
+            try {
+                const res = await fetch(`${API_BASE}?author=1&_embed&per_page=10`);
+                const posts = await res.json();
+
+                section.innerHTML = posts.map(post => `
+          <div class="glassy blog-item shadow rounded-lg p-1 hover:shadow-lg transition" onclick="loadPost(${post.id}); return false;">
+            <a href="#post-${post.id}" class="block" onclick="loadPost(${post.id}); return false;">
+              <h4 class="text-xl font-bold text-blue-800 flex items-center gap-2">
+                <span class="material-icons text-blue-500">article</span>
+                <b>${post.title.rendered}</b>
+              </h4>
+              <p class="text-gray-500 text-sm mt-2 flex items-center gap-1">
+                <span class="material-icons text-sm">event</span>
+                <strong>${formatDateOrAgo(post.date)}</strong>
+              </p>
+            </a>
+          </div>
+        `).join("");
+            } catch (err) {
+                section.innerHTML = `<p class="text-red-600 text-center">خطا در دریافت مقالات: ${err.message}</p>`;
+            }
+        }
+
+        // حالت جزئیات
+        async function loadPost(id) {
+            section.innerHTML = "<p class='text-center text-gray-500'>در حال بارگذاری...</p>";
+            try {
+                const res = await fetch(`${API_BASE}/${id}`);
+                const post = await res.json();
+
+                section.innerHTML = `
+                <div class="mt-8 text-center">
+            <a href="#" onclick="loadPosts(); return false;"
+               class="return-key inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+              <span class="material-icons">
+arrow_back
+</span>
+            </a>
+          </div>
+          <article class="glassy shadow rounded-lg p-6">
+            <h1 class="d-none text-3xl font-extrabold text-blue-900 mb-3 flex items-center gap-2">
+              <span class="material-icons text-blue-600">description</span>
+              ${post.title.rendered}
+            </h1>
+            <p class="text-gray-500 mb-6 flex items-center gap-1">
+              <span class="material-icons text-sm">event</span>
+              ${formatDateOrAgo(post.date)}
+            </p>
+            <div class="prose max-w-none leading-relaxed">${post.content.rendered}</div>
+          </article>
+
+          
+        `;
+            } catch (err) {
+                section.innerHTML = `<p class="text-red-600 text-center">خطا در دریافت مقاله: ${err.message}</p>`;
+            }
+        }
+        function formatDateOrAgo(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffSeconds = Math.floor((now - date) / 1000);
+            const diffDays = Math.floor(diffSeconds / 86400);
+
+            if (diffDays < 1) {
+                if (diffSeconds < 60) return "چند لحظه پیش";
+                if (diffSeconds < 3600) return Math.floor(diffSeconds / 60) + " دقیقه پیش";
+                return Math.floor(diffSeconds / 3600) + " ساعت پیش";
+            }
+
+            if (diffDays < 20) {
+                return diffDays + " روز پیش";
+            }
+
+            // نمایش تاریخ شمسی
+            return new Intl.DateTimeFormat("fa-IR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            }).format(date);
+        }
+
+
+        // شروع با لیست
+        loadPosts();
+    </script>
+    <footer class="pt-30 pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <p class="fz-13">© 2025 - Proudly Hosted by <span class="underline main-color"><a
+                                    href="https://webiro.ir" target="_blank">WEBIRO</a></span> Cloud-Servers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==================== End Footer ==================== -->
+    <!-- jQuery -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <!-- plugins -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <!-- custom scripts -->
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/three.min.js"></script>
+    <script src="../assets/js/cdemo.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

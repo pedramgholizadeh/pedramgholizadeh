@@ -1,0 +1,275 @@
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: 200;
+	src: url('fonts/woff2/PeydaWeb-ExtraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-ExtraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: 300;
+	src: url('fonts/woff2/PeydaWeb-Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-Light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/woff2/PeydaWeb-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: 500;
+	src: url('fonts/woff2/PeydaWeb-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-Medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: 600;
+	src: url('fonts/woff2/PeydaWeb-Semibold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-Semibold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/woff2/PeydaWeb-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/woff2/PeydaWeb-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: PeydaWeb;
+	font-style: normal;
+	font-weight: 900;
+	src: url('fonts/woff2/PeydaWeb-Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../linkinbio/fonts/woff/PeydaWeb-Black.woff') format('woff')  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+* {
+    border:unset;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , p , a , div {
+    font-family: 'PeydaWeb', sans-serif !important;
+}
+.row {
+    max-width: 95% !important;
+    width:95% !important;
+    padding:8px !important;
+    margin: auto;
+    
+}
+.glassy {
+    background:rgba(255, 255, 255, 0.005);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 2px rgb(219, 255, 239 , 0.15);
+    border-radius: 1rem;
+}
+.my-info {
+    text-align: center;
+    background:rgba(255, 255, 255, 0.005);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px rgb(219, 255, 239 , 0.15);
+}
+.my-info .texts h1 {
+    color:rgb(219, 255, 239);
+    font-size:28px;
+    font-weight: 900;
+}
+.my-info img {
+    width:270px;
+    display: block;
+    margin: 1.5rem auto 0.5rem auto;
+    border-radius: 1rem;
+}
+.my-info .texts img {
+    opacity: 0.2;
+    filter: contrast(200%) blur(1px);
+    width:80%;
+    position: absolute;
+    top:-10px;
+    right:0;
+    left:0;
+    z-index: -1;
+}
+
+.icons .col {
+    padding:10px;
+    background:rgba(255, 255, 255, 0.005);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 2px rgb(219, 255, 239 , 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    height:70px;
+    font-size:32px;
+}
+.icons .col a {
+    color:rgb(219, 255, 239);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-with-title {
+    padding: 1rem;
+    margin-bottom: 16px;
+}
+.cta-with-title h3 {
+    font-size:18px;
+    font-weight: 400;
+    color:rgb(219, 255, 239);
+}
+
+.cta-with-title a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cta-with-title span ,
+.cta-with-title i {
+    font-size:24px;
+    color:rgb(219, 255, 239);
+}
+.sos h3:after {
+    content: "فقط شرایط اضطراری";
+    opacity: 0.4;
+    filter: contrast(200%) blur(1px);
+    color:darkorange;
+    z-index: -1;
+    font-size:12px;
+    margin-right: 5px;
+}
+.soon h3:after {
+    content: "به زودی";
+    opacity: 0.4;
+    filter: contrast(200%) blur(1px);
+    color:darkturquoise;
+    z-index: -1;
+    font-size:12px;
+    margin-right: 5px;
+}
+.donate h3:after {
+    content: "فرهنگ‌سازی محتوایی";
+    opacity: 0.4;
+    filter: contrast(200%) blur(1px);
+    color:moccasin;
+    z-index: -1;
+    font-size:12px;
+    margin-right: 5px;
+}
+.mg-resume {
+    margin-bottom: 0px !important;
+}
+
+
+header {
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    z-index:2;
+    text-align:center;
+    padding:0.5rem;
+    background:rgba(255, 255, 255, 0.005);
+    backdrop-filter: blur(5px);
+    height:100px;
+    box-shadow: 0 0 2px rgb(219, 255, 239 , 0.15);
+}
+
+header + div.container {
+    padding-top:100px;
+    max-width:100%;
+    margin:0;
+}
+header + div.container section {
+    margin:0 !important;
+    width:100%;
+    max-width:100%;
+    padding:0;
+}
+.blog-item {
+    padding:1rem !important;
+    margin-bottom:0.5rem;
+    height:120px;
+}
+.blog-item h4 {
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    overflow: hidden;
+}
+.blog-item h4 b {
+    
+}
+.blog-item h4 span {
+    font-size:45px;
+    opacity:0.1;
+    position:absolute;
+    bottom:10px;
+    left:10px;
+}
+
+.blog-item p {
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    bottom:10px;
+    right:10px;
+}
+.blog-item p {
+    color:gray;
+}
+
+article {
+    width:100%;
+    position:absolute;
+    top:100px;
+    right:0;
+    padding:1rem;
+    border-radius:0 !important;
+}
+article h1 {
+    display:none !important;
+}
+
+.return-key {
+    position: fixed;
+	display:flex;
+    bottom:1rem;
+    left:1rem;
+    z-index: 4;
+	justify-content:center;
+	align-items:center;
+	background:#d633842e;
+	width:55px !important;
+	height:55px !important;
+	padding:0 !important;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    box-shadow: 0 0 2px rgb(219, 255, 239 , 0.15);
+
+}
+.return-key span {
+	font-size:28px;
+}
