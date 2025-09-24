@@ -81,7 +81,6 @@
         const API_BASE = "https://s1.webiro.ir/pedralizad/wp-json/wp/v2/posts";
         const section = document.getElementById("blog-section");
 
-        // حالت لیست
         async function loadPosts() {
             section.innerHTML = "<p class='text-center text-gray-500'>در حال بارگذاری...</p>";
             try {
@@ -107,40 +106,128 @@
             }
         }
 
-        // حالت جزئیات
         async function loadPost(id) {
             section.innerHTML = "<p class='text-center text-gray-500'>در حال بارگذاری...</p>";
+
             try {
-                const res = await fetch(`${API_BASE}/${id}`);
-                const post = await res.json();
+                const resPost = await fetch(`${API_BASE}/${id}`);
+                const post = await resPost.json();
+
+                const resComments = await fetch(`${API_BASE.replace('/posts', '/comments')}?post=${id}`);
+                const comments = await resComments.json();
 
                 section.innerHTML = `
-                <div class="mt-8 text-center">
-            <a href="#" onclick="loadPosts(); return false;"
-               class="return-key inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">
-              <span class="material-icons">
-arrow_back
-</span>
-            </a>
-          </div>
-          <article class="glassy shadow rounded-lg p-6">
-            <h1 class="d-none text-3xl font-extrabold text-blue-900 mb-3 flex items-center gap-2">
-              <span class="material-icons text-blue-600">description</span>
-              ${post.title.rendered}
-            </h1>
-            <p class="text-gray-500 mb-6 flex items-center gap-1">
-              <span class="material-icons text-sm">event</span>
-              ${formatDateOrAgo(post.date)}
-            </p>
-            <div class="prose max-w-none leading-relaxed">${post.content.rendered}</div>
-          </article>
+            <article class="glassy shadow rounded-lg p-6 mb-8">
+                <div class="text-center mb-6">
+                    <a href="#" onclick="loadPosts(); return false;"
+                       class="return-key inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+                      <span class="material-icons">arrow_back</span>
+                    </a>
+                </div>
 
-          
+                <h1 class="text-3xl font-extrabold text-blue-900 mb-3 flex items-center gap-2">
+                    <span class="material-icons text-blue-600">description</span>
+                    ${post.title.rendered}
+                </h1>
+
+                <p class="text-gray-500 mb-6 flex items-center gap-1">
+                    <span class="material-icons text-sm">event</span>
+                    ${formatDateOrAgo(post.date)}
+                </p>
+
+                <div class="prose max-w-none leading-relaxed mb-8">
+                    ${post.content.rendered}
+                </div>
+
+                <!-- کامنت‌ها -->
+                <div class="comments mb-6">
+                    <h3 class="text-xl font-semibold mt-4 mb-4">نظرات شما: (${comments.length})</h3>
+                    <div id="comments-list" class="space-y-4">
+                        ${comments.map(c => `
+                            <div class="p-3 border rounded-lg bg-gray-50">
+                                <strong>${c.author_name}</strong>
+                                <p class="text-gray-700">${c.content.rendered}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- فرم ارسال کامنت -->
+                <div class="comment-form mb-4">
+                    <h4 class="text-xl font-semibold mb-3">نظرت رو برام بنویس :)</h4>
+                    <input id="comment-author" type="text" placeholder="اسمت؟" class="border p-2 w-full mb-3 rounded">
+                    <textarea id="comment-content" placeholder="نظرت چیه؟" class="border p-2 w-full mb-3 rounded" rows="4"></textarea>
+                    <button id="submit-comment" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">ثبت نظر</button>
+                    <p id="comment-msg" class="text-sm mt-2"></p>
+                </div>
+            </article>
         `;
+
+                document.getElementById('submit-comment').addEventListener('click', async () => {
+                    const author = document.getElementById('comment-author').value.trim();
+                    const content = document.getElementById('comment-content').value.trim();
+                    const msg = document.getElementById('comment-msg');
+
+                    if (!author || !content) {
+                        msg.textContent = "لطفاً نام و متن نظر را وارد کنید.";
+                        msg.className = "text-red-600 text-sm mt-2";
+                        return;
+                    }
+
+                    try {
+                        // داداش میتونی یوزرنیم پسورد رو برداری، فرو کنی تو کونت اگه میخوای کاری انجام بدی :)))))
+                        const username = 'blahblah';
+                        const password = 'SoFuckingBlahBlah';
+                        const credentials = btoa(`${username}:${password}`);
+
+                        const res = await fetch(`${API_BASE.replace('/posts', '/comments')}`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Basic ' + credentials
+                            },
+                            body: JSON.stringify({
+                                post: id,
+                                author_name: author,
+                                content: content
+                            })
+                        });
+
+                        const newComment = await res.json();
+
+                        if (res.ok) {
+                            const commentList = document.getElementById('comments-list');
+                            const div = document.createElement('div');
+                            div.className = "p-3 border rounded-lg bg-gray-50";
+                            div.innerHTML = `<strong>${newComment.author_name}</strong><p class="text-gray-700">${newComment.content.rendered}</p>`;
+                            commentList.prepend(div);
+
+                            document.getElementById('comment-author').value = '';
+                            document.getElementById('comment-content').value = '';
+                            msg.textContent = "نظر شما با موفقیت ارسال شد!";
+                            msg.className = "text-green-600 text-sm mt-2";
+
+                            // به‌روزرسانی تعداد کامنت‌ها
+                            const commentsHeader = commentList.previousElementSibling;
+                            if (commentsHeader) {
+                                commentsHeader.textContent = `نظرات (${commentList.children.length})`;
+                            }
+
+                        } else {
+                            msg.textContent = newComment.message || "خطا در ارسال نظر.";
+                            msg.className = "text-red-600 text-sm mt-2";
+                        }
+                    } catch (err) {
+                        msg.textContent = "خطا در ارسال نظر: " + err.message;
+                        msg.className = "text-red-600 text-sm mt-2";
+                    }
+                });
+
             } catch (err) {
                 section.innerHTML = `<p class="text-red-600 text-center">خطا در دریافت مقاله: ${err.message}</p>`;
             }
         }
+
         function formatDateOrAgo(dateString) {
             const date = new Date(dateString);
             const now = new Date();
@@ -157,7 +244,6 @@ arrow_back
                 return diffDays + " روز پیش";
             }
 
-            // نمایش تاریخ شمسی
             return new Intl.DateTimeFormat("fa-IR", {
                 year: "numeric",
                 month: "long",
@@ -166,7 +252,6 @@ arrow_back
         }
 
 
-        // شروع با لیست
         loadPosts();
     </script>
     <footer class="pt-30 pb-30">
@@ -194,5 +279,36 @@ arrow_back
     <script src="../assets/js/cdemo.js"></script>
     <script src="app.js"></script>
 </body>
+<style>
+    .comment-form {
+        margin-bottom: 5rem !important;
+    }
+
+    .comment-form input[type=text],
+    .comment-form textarea {
+        background: transparent;
+        color: white;
+        width: 100%;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .comment-form button {
+        width: 100%;
+        background: orange
+    }
+
+    div#comments-list div {
+        background: #43437b;
+        border: 3px solid #2e2e78 !important;
+        margin-bottom: 0.4rem;
+    }
+
+    p.text-gray-500.mb-6.flex.items-center.gap-1 {
+        opacity: 0.2;
+        border-bottom: 1px solid #ff6a6a94;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+</style>
 
 </html>
