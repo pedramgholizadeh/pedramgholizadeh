@@ -1,11 +1,8 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Hawke
-    Theme URI: http://
-    Description: Creative Personal & Portfolio
-    Author: UI-ThemeZ
-    Author URI: http://themeforest.net/user/UI-ThemeZ
-    Version: 1.0
+    HI <3 what are you looking for? easy-to-use template? NAH
+
+    PEDRO WAS THERE
 
 -----------------------------------------------------------------------------------*/
 

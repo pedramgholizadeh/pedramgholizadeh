@@ -1,7 +1,3 @@
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
 THREE.SpriteCanvasMaterial = function (parameters) {
 
     THREE.Material.call(this);
