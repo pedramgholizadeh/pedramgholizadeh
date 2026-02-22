@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>File Browser</title>
+</head>
+<body>
+  <h2>Uploads</h2>
+  <ul id="fileList"></ul>
+
+<script>
+const owner = "pedramgholizadeh";
+const repo = "pedramgholizadeh";
+const path = "uploads";
+
+fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById("fileList");
+
+    data.forEach(item => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+
+      link.href = item.download_url;
+      link.textContent = item.name;
+      link.target = "_blank";
+
+      li.appendChild(link);
+      list.appendChild(li);
+    });
+  });
+</script>
+</body>
+</html>
