@@ -48,10 +48,14 @@
 <script>
 const owner = "pedramgholizadeh";
 const repo = "pedramgholizadeh";
-const branch = "Main";
+const branch = "Main"; // ⚠ اگر واقعاً Main است تغییر نده
 
 let currentPath = "uploads";
 let historyStack = [];
+
+// فایل‌هایی که نباید نمایش داده شوند
+const hiddenFiles = ["index.html"];
+const blockedExtensions = ["html"];
 
 function formatSize(bytes) {
   if (!bytes) return "";
@@ -95,44 +99,81 @@ async function loadDirectory(path) {
   currentPath = path;
   updateBreadcrumb(path);
 
-  document.getElementById("fileContainer").innerHTML = "";
+  const container = document.getElementById("fileContainer");
+  container.innerHTML = "";
 
-  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`);
-  const data = await res.json();
+  try {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`);
+    const data = await res.json();
 
-  data.forEach(item => {
-    const icon = getFileIcon(item.name, item.type);
-
-    const card = document.createElement("div");
-    card.className = "bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 flex flex-col items-center text-center relative";
-
-    if (item.type === "dir") {
-      card.innerHTML = `
-        <span class="material-symbols-outlined text-5xl text-yellow-500 mb-2">${icon}</span>
-        <p class="text-sm font-medium truncate w-full">${item.name}</p>
-      `;
-
-      card.onclick = () => {
-        historyStack.push(currentPath);
-        document.getElementById("backBtn").classList.remove("hidden");
-        loadDirectory(item.path);
-      };
-
-    } else {
-
-      card.innerHTML = `
-        <span class="material-symbols-outlined text-5xl text-blue-500 mb-2">${icon}</span>
-        <p class="text-sm font-medium truncate w-full">${item.name}</p>
-        <p class="text-xs text-gray-400 mt-1">${formatSize(item.size)}</p>
-        <a href="${item.download_url}" target="_blank"
-           class="absolute top-2 right-2 text-gray-400 hover:text-blue-600">
-          <span class="material-symbols-outlined text-base">download</span>
-        </a>
-      `;
+    if (!Array.isArray(data)) {
+      container.innerHTML = `<p class="text-red-500">Error loading directory.</p>`;
+      return;
     }
 
-    document.getElementById("fileContainer").appendChild(card);
-  });
+    // 🔥 فیلتر فایل‌های ناخواسته
+    let filtered = data.filter(item => {
+
+      if (item.name.startsWith(".")) return false;
+      if (hiddenFiles.includes(item.name)) return false;
+
+      const ext = item.name.includes(".")
+        ? item.name.split('.').pop().toLowerCase()
+        : "";
+
+      if (blockedExtensions.includes(ext)) return false;
+
+      return true;
+    });
+
+    // 🔥 مرتب‌سازی: پوشه‌ها اول
+    filtered.sort((a,b) => {
+      if (a.type === "dir" && b.type !== "dir") return -1;
+      if (a.type !== "dir" && b.type === "dir") return 1;
+      return a.name.localeCompare(b.name);
+    });
+
+    filtered.forEach(item => {
+
+      const icon = getFileIcon(item.name, item.type);
+
+      const card = document.createElement("div");
+      card.className =
+        "bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 flex flex-col items-center text-center relative cursor-pointer";
+
+      if (item.type === "dir") {
+
+        card.innerHTML = `
+          <span class="material-symbols-outlined text-5xl text-yellow-500 mb-2">${icon}</span>
+          <p class="text-sm font-medium truncate w-full">${item.name}</p>
+        `;
+
+        card.onclick = () => {
+          historyStack.push(currentPath);
+          document.getElementById("backBtn").classList.remove("hidden");
+          loadDirectory(item.path);
+        };
+
+      } else {
+
+        card.innerHTML = `
+          <span class="material-symbols-outlined text-5xl text-blue-500 mb-2">${icon}</span>
+          <p class="text-sm font-medium truncate w-full">${item.name}</p>
+          <p class="text-xs text-gray-400 mt-1">${formatSize(item.size)}</p>
+          <a href="${item.download_url}" target="_blank"
+             class="absolute top-2 right-2 text-gray-400 hover:text-blue-600"
+             onclick="event.stopPropagation()">
+            <span class="material-symbols-outlined text-base">download</span>
+          </a>
+        `;
+      }
+
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    container.innerHTML = `<p class="text-red-500">API request failed.</p>`;
+  }
 }
 
 function navigate(path) {
