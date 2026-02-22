@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>File Browser</title>
+<meta charset="UTF-8">
+<title>Uploads Browser</title>
+<style>
+body { font-family: Arial; }
+ul { list-style-type: none; padding-left: 20px; }
+li { margin: 4px 0; }
+.folder { cursor: pointer; font-weight: bold; }
+.file a { text-decoration: none; }
+</style>
 </head>
 <body>
-  <h2>Uploads</h2>
-  <ul id="fileList"></ul>
+
+<h2>Uploads</h2>
+<ul id="fileTree"></ul>
 
 <script>
 const owner = "pedramgholizadeh";
 const repo = "pedramgholizadeh";
-const path = "uploads";
+const branch = "Main"; 
 
-fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
-  .then(res => res.json())
-  .then(data => {
-    const list = document.getElementById("fileList");
+async function loadDirectory(path, container) {
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+    
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    const ul = document.createElement("ul");
 
     data.forEach(item => {
-      const li = document.createElement("li");
-      const link = document.createElement("a");
+        const li = document.createElement("li");
 
-      link.href = item.download_url;
-      link.textContent = item.name;
-      link.target = "_blank";
+        if (item.type === "dir") {
+            li.innerHTML = `<span class="folder">📁 ${item.name}</span>`;
+            li.querySelector(".folder").addEventListener("click", function () {
 
-      li.appendChild(link);
-      list.appendChild(li);
+                // جلوگیری از دوبار لود شدن
+                if (li.getAttribute("data-loaded")) {
+                    const child = li.querySelector("ul");
+                    child.style.display = child.style.display === "none" ? "block" : "none";
+                    return;
+                }
+
+                loadDirectory(item.path, li);
+                li.setAttribute("data-loaded", "true");
+            });
+        } else {
+            li.className = "file";
+            li.innerHTML = `📄 <a href="${item.download_url}" download>${item.name}</a>`;
+        }
+
+        ul.appendChild(li);
     });
-  });
+
+    container.appendChild(ul);
+}
+
+// لود اولیه uploads
+loadDirectory("uploads", document.getElementById("fileTree"));
 </script>
+
 </body>
 </html>
