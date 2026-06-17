@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Pedram Gholizadeh — Technical Lead | Backend Architect | Founder</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --accent:#55e6a5;
+    --accent-dark:#1fbf7a;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --line:rgba(31,41,55,.08);
+    --glass:rgba(255,255,255,.6);
+    --glass-strong:rgba(255,255,255,.78);
+  }
+  html,body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased;background:
+    radial-gradient(1200px 600px at 10% -10%, #d6fbe8 0%, transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, #e6f0ff 0%, transparent 55%),
+    linear-gradient(180deg,#f7f9fc,#eef2f7);}
+  body{display:flex;justify-content:center;padding:18px;}
+  .page{
+    width:210mm;min-height:297mm;padding:12mm 12mm 10mm;
+    background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.7));
+    border-radius:18px;
+    box-shadow:0 30px 60px -30px rgba(31,41,55,.25), 0 8px 24px -12px rgba(31,41,55,.15);
+    backdrop-filter:blur(20px) saturate(140%);
+    border:1px solid rgba(255,255,255,.6);
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .page::before{
+    content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(400px 240px at 20% 0%, rgba(85,230,165,.18), transparent 60%),
+      radial-gradient(380px 220px at 100% 100%, rgba(120,170,255,.15), transparent 60%);
+    z-index:0;pointer-events:none;
+  }
+  .page > *{position:relative;z-index:1}
+
+  /* Header */
+  header.top{
+    display:grid;grid-template-columns:1fr 110px;gap:18px;align-items:center;
+    padding:14px 16px;border-radius:14px;
+    background:var(--glass-strong);backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.7);
+    box-shadow:0 8px 24px -16px rgba(31,41,55,.25);
+  }
+  .name{font-size:24px;font-weight:700;letter-spacing:-.02em}
+  .title{margin-top:2px;font-size:11.5px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+  .title b{color:var(--text);font-weight:600}
+  .accent-bar{display:inline-block;width:34px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));margin:8px 0 8px}
+  .contact{font-size:10px;color:var(--muted);line-height:1.55;display:flex;flex-wrap:wrap;gap:4px 10px}
+  .contact span{white-space:nowrap}
+  .contact b{color:var(--text);font-weight:600}
+  .socials{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
+  .pill{
+    font-size:9.5px;padding:3px 8px;border-radius:999px;
+    background:rgba(85,230,165,.14);color:#0e7a4e;border:1px solid rgba(85,230,165,.35);
+    font-weight:500;letter-spacing:.01em;
+  }
+  .pill.alt{background:rgba(31,41,55,.05);color:var(--text);border-color:var(--line)}
+  .avatar{
+    width:110px;height:110px;border-radius:10px;
+    background:linear-gradient(135deg, rgba(85,230,165,.25), rgba(120,170,255,.18));
+    border:1px solid rgba(255,255,255,.8);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.6), 0 10px 24px -14px rgba(31,41,55,.3);
+    backdrop-filter:blur(12px);
+    display:flex;align-items:center;justify-content:center;
+    color:rgba(31,41,55,.35);font-size:10px;font-weight:600;letter-spacing:.08em;
+  }
+
+  /* Section */
+  section.card{
+    padding:12px 14px;border-radius:12px;
+    background:var(--glass);backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.6);
+    box-shadow:0 6px 18px -14px rgba(31,41,55,.2);
+  }
+  h2.section-title{
+    font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--text);display:flex;align-items:center;gap:8px;margin-bottom:8px;
+  }
+  h2.section-title::before{
+    content:"";width:6px;height:6px;border-radius:2px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    box-shadow:0 0 0 3px rgba(85,230,165,.18);
+  }
+
+  /* Summary */
+  .summary p{font-size:10.5px;line-height:1.65;color:#374151}
+
+  /* Skills */
+  .skills{display:flex;flex-wrap:wrap;gap:5px}
+  .skill{
+    font-size:9.5px;padding:4px 9px;border-radius:8px;
+    background:linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.6));
+    border:1px solid var(--line);color:var(--text);font-weight:500;
+    box-shadow:0 2px 6px -4px rgba(31,41,55,.15);
+  }
+  .skill.accent{
+    background:linear-gradient(180deg, rgba(85,230,165,.18), rgba(85,230,165,.08));
+    border-color:rgba(85,230,165,.4);color:#0e7a4e;
+  }
+
+  /* Grid layout */
+  .grid{display:grid;grid-template-columns:1.55fr 1fr;gap:10px}
+
+  /* Experience */
+  .exp-list{display:flex;flex-direction:column;gap:9px}
+  .exp{position:relative;padding-left:12px}
+  .exp::before{
+    content:"";position:absolute;left:0;top:5px;bottom:4px;width:2px;border-radius:2px;
+    background:linear-gradient(180deg,var(--accent),rgba(85,230,165,.1));
+  }
+  .exp-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .exp-company{font-size:11.5px;font-weight:700;color:var(--text);letter-spacing:-.01em}
+  .exp-role{font-size:10px;color:var(--muted);font-weight:500;margin-top:1px}
+  .exp-meta{font-size:9px;color:var(--muted);font-weight:500;white-space:nowrap}
+  .exp ul{list-style:none;margin-top:4px;display:flex;flex-direction:column;gap:2px}
+  .exp ul li{
+    position:relative;padding-left:10px;font-size:10px;line-height:1.5;color:#374151;
+  }
+  .exp ul li::before{
+    content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;
+    background:var(--accent-dark);
+  }
+  .exp .platforms{font-size:9px;color:var(--muted);margin-top:2px;font-style:italic}
+
+  /* Languages */
+  .lang-list{display:flex;flex-direction:column;gap:6px}
+  .lang{display:flex;justify-content:space-between;align-items:center;font-size:10px}
+  .lang b{font-weight:600}
+  .lang span{color:var(--muted)}
+  .bar{height:4px;border-radius:4px;background:rgba(31,41,55,.08);overflow:hidden;margin-top:3px}
+  .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-dark));border-radius:4px}
+
+  /* Right column highlight box */
+  .highlight{
+    margin-top:8px;padding:10px 12px;border-radius:10px;
+    background:linear-gradient(135deg, rgba(85,230,165,.15), rgba(85,230,165,.04));
+    border:1px solid rgba(85,230,165,.35);
+    font-size:9.5px;line-height:1.55;color:#0e5a3a;
+  }
+  .highlight b{color:#0a3d28}
+
+  footer.foot{
+    text-align:center;font-size:8.5px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:auto;padding-top:6px
+  }
+
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:#fff;padding:0}
+    .page{
+      width:210mm;height:297mm;min-height:297mm;border-radius:0;box-shadow:none;border:none;
+      padding:10mm 11mm;page-break-after:avoid;page-break-inside:avoid;break-inside:avoid;
+    }
+    section, .exp, header.top{break-inside:avoid;page-break-inside:avoid}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+
+    <header class="top">
+      <div>
+        <div class="name">Pedram Gholizadeh</div>
+        <div class="title"><b>Technical Lead</b> &nbsp;·&nbsp; <b>Backend Architect</b> &nbsp;·&nbsp; <b>Founder</b></div>
+        <div class="accent-bar"></div>
+        <div class="contact">
+          <span><b>Phone</b> +98 912 089 4404</span>
+          <span><b>Email</b> pedram@webiro.ir</span>
+          <span>pedramgholizadeh@gmail.com</span>
+          <span><b>Web</b> pedramgholizadeh.ir</span>
+        </div>
+        <div class="socials">
+          <span class="pill">in/pedramgholizadeh</span>
+          <span class="pill">gh/pedramgholizadeh</span>
+          <span class="pill alt">t.me/pedramgholizadeh</span>
+          <span class="pill alt">x.com/pedramgholizade</span>
+          <span class="pill alt">ig/pedramgholizadeh</span>
+        </div>
+      </div>
+      <div class="avatar">PHOTO</div>
+    </header>
+
+    <section class="card summary">
+      <h2 class="section-title">Executive Summary</h2>
+      <p>Backend-focused technical leader with <b>10+ years</b> architecting and scaling high-traffic platforms across media, e-commerce, and SaaS. Specialist in <b>PHP/Laravel</b> ecosystems, distributed API design, caching strategies, and SSO/authentication at scale. Founder mindset with proven ownership across the full delivery lifecycle — from system design and team leadership to product strategy and shipping. Trusted to translate ambiguous business goals into resilient, observable, performant systems that grow with the organization.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Experience</h2>
+        <div class="exp-list">
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Webiro</div>
+                <div class="exp-role">Founder &amp; Technical Director</div>
+              </div>
+              <div class="exp-meta">Present</div>
+            </div>
+            <ul>
+              <li>Led architecture and delivery of <b>50+ digital products</b> across diverse industries.</li>
+              <li>Designed scalable backend systems and API infrastructures powering client platforms.</li>
+              <li>Owned technical strategy, client delivery, hiring, and system design decisions.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Tehransite</div>
+                <div class="exp-role">Co-Founder &amp; Engineering Lead</div>
+              </div>
+              <div class="exp-meta">Multi-year</div>
+            </div>
+            <ul>
+              <li>Led engineering teams and defined backend architecture standards.</li>
+              <li>Built scalable web platforms and internal APIs for production workloads.</li>
+              <li>Managed end-to-end product delivery and release cadence.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Farakav Holding</div>
+                <div class="exp-role">Backend Engineer</div>
+                <div class="platforms">Platforms: Varzesh3 · Anten · Tamasha</div>
+              </div>
+              <div class="exp-meta">High-traffic</div>
+            </div>
+            <ul>
+              <li>Built and optimized high-traffic backend services serving millions of users.</li>
+              <li>Designed <b>Redis caching strategies</b> and centralized <b>SSO authentication</b>.</li>
+              <li>Contributed to livestream infrastructure and real-time delivery services.</li>
+              <li>Developed crawler and data-aggregation pipelines for content platforms.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Iransite</div>
+                <div class="exp-role">Backend Lead · WordPress Engineering Manager</div>
+              </div>
+              <div class="exp-meta">100+ projects</div>
+            </div>
+            <ul>
+              <li>Led backend engineering across <b>100+ client projects</b> and production systems.</li>
+              <li>Designed deployment pipelines, code standards, and architectural patterns.</li>
+              <li>Improved performance, reliability, and scalability of live platforms.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Alibaba</div>
+                <div class="exp-role">SEO &amp; Technical Systems Engineer</div>
+              </div>
+              <div class="exp-meta">Travel</div>
+            </div>
+            <ul>
+              <li>Lifted competitive keyword rankings via technical and structural optimization.</li>
+              <li>Improved site performance, indexing architecture, and backend SEO systems.</li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <aside style="display:flex;flex-direction:column;gap:10px">
+        <section class="card">
+          <h2 class="section-title">Core Skills</h2>
+          <div class="skills">
+            <span class="skill accent">Backend Architecture</span>
+            <span class="skill accent">System Design</span>
+            <span class="skill accent">Scalable Systems</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Laravel</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">Redis</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">Authentication</span>
+            <span class="skill">SSO</span>
+            <span class="skill">Performance Optimization</span>
+            <span class="skill">WordPress Engineering</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Git</span>
+            <span class="skill">CI/CD</span>
+            <span class="skill accent">Team Leadership</span>
+            <span class="skill accent">Product Ownership</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Languages</h2>
+          <div class="lang-list">
+            <div>
+              <div class="lang"><b>Persian</b><span>Native</span></div>
+              <div class="bar"><i style="width:100%"></i></div>
+            </div>
+            <div>
+              <div class="lang"><b>English</b><span>Fluent</span></div>
+              <div class="bar"><i style="width:88%"></i></div>
+            </div>
+            <div>
+              <div class="lang"><b>Turkish</b><span>Conversational</span></div>
+              <div class="bar"><i style="width:55%"></i></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Highlights</h2>
+          <div class="highlight">
+            <b>10+ yrs</b> backend leadership · <b>50+</b> products shipped · <b>100+</b> production deployments · architected SSO &amp; Redis caching for platforms serving millions.
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="foot">Pedram Gholizadeh — Confidential Resume · Available for Senior &amp; Staff Engineering Roles</footer>
+  </main>
+</body>
+</html>

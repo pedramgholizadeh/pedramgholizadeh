@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Pedram Gholizadeh — Technical Lead | Backend Architect | Founder</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --accent:#55e6a5;
+    --accent-dark:#1fbf7a;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --line:rgba(31,41,55,.08);
+    --glass:rgba(255,255,255,.6);
+    --glass-strong:rgba(255,255,255,.78);
+  }
+  .social-row .skill {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px 10px;
+        font-size: 9.5px;
+        color: var(--text);
+    }
+  html,body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased;background:
+    radial-gradient(1200px 600px at 10% -10%, #d6fbe8 0%, transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, #e6f0ff 0%, transparent 55%),
+    linear-gradient(180deg,#f7f9fc,#eef2f7);}
+  body{display:flex;justify-content:center;padding:18px;}
+  .page{
+    width:210mm;min-height:297mm;padding:12mm 12mm 10mm;
+    background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.7));
+    border-radius:18px;
+    box-shadow:0 30px 60px -30px rgba(31,41,55,.25), 0 8px 24px -12px rgba(31,41,55,.15);
+    backdrop-filter:blur(20px) saturate(140%);
+    border:1px solid rgba(255,255,255,.6);
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .page::before{
+    content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(400px 240px at 20% 0%, rgba(85,230,165,.18), transparent 60%),
+      radial-gradient(380px 220px at 100% 100%, rgba(120,170,255,.15), transparent 60%);
+    z-index:0;pointer-events:none;
+  }
+  .page > *{position:relative;z-index:1}
+
+  /* Header */
+  header.top{
+    display:grid;grid-template-columns:1fr 110px;gap:18px;align-items:center;
+    padding:14px 16px;border-radius:14px;
+    background:var(--glass-strong);backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.7);
+    box-shadow:0 8px 24px -16px rgba(31,41,55,.25);
+  }
+  .name{font-size:24px;font-weight:700;letter-spacing:-.02em}
+  .title{margin-top:2px;font-size:11.5px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+  .title b{color:var(--text);font-weight:600}
+  .accent-bar{display:inline-block;width:34px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));margin:8px 0 8px}
+  .contact{font-size:9.5px;color:var(--muted);line-height:1.6;display:flex;flex-direction:column;gap:1px}
+  .contact span{white-space:nowrap}
+  .contact b{color:var(--text);font-weight:600}
+  .socials{margin-top:6px;display:flex;flex-direction:column;gap:4px}
+  .social-row{display:flex;align-items:center;flex-wrap:wrap;gap:5px 10px;font-size:9.5px;color:var(--text)}
+  .social-row svg{width:13px;height:13px;flex-shrink:0;display:block}
+  .avatar{
+    width:110px;height:110px;border-radius:10px;
+    background:linear-gradient(135deg, rgba(85,230,165,.25), rgba(120,170,255,.18));
+    border:1px solid rgba(255,255,255,.8);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.6), 0 10px 24px -14px rgba(31,41,55,.3);
+    backdrop-filter:blur(12px);
+    display:flex;align-items:center;justify-content:center;
+    color:rgba(31,41,55,.35);font-size:10px;font-weight:600;letter-spacing:.08em;
+  }
+
+  /* Section */
+  section.card{
+    padding:12px 14px;border-radius:12px;
+    background:var(--glass);backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.6);
+    box-shadow:0 6px 18px -14px rgba(31,41,55,.2);
+  }
+  h2.section-title{
+    font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--text);display:flex;align-items:center;gap:8px;margin-bottom:8px;
+  }
+  h2.section-title::before{
+    content:"";width:6px;height:6px;border-radius:2px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    box-shadow:0 0 0 3px rgba(85,230,165,.18);
+  }
+
+  /* Summary */
+  .summary p{font-size:10.5px;line-height:1.65;color:#374151}
+
+  /* Skills */
+  .skills{display:flex;flex-wrap:wrap;gap:5px}
+  .skill{
+    font-size:9.5px;padding:4px 9px;border-radius:8px;
+    background:linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.6));
+    border:1px solid var(--line);color:var(--text);font-weight:500;
+    box-shadow:0 2px 6px -4px rgba(31,41,55,.15);
+  }
+  .skill.accent{
+    background:linear-gradient(180deg, rgba(85,230,165,.18), rgba(85,230,165,.08));
+    border-color:rgba(85,230,165,.4);color:#0e7a4e;
+  }
+
+  /* Grid layout */
+  .grid{display:grid;grid-template-columns:1.55fr 1fr;gap:10px}
+
+  /* Experience */
+  .exp-list{display:flex;flex-direction:column;gap:9px}
+  .exp{position:relative;padding-left:12px}
+  .exp::before{
+    content:"";position:absolute;left:0;top:5px;bottom:4px;width:2px;border-radius:2px;
+    background:linear-gradient(180deg,var(--accent),rgba(85,230,165,.1));
+  }
+  .exp-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .exp-company{font-size:11.5px;font-weight:700;color:var(--text);letter-spacing:-.01em}
+  .exp-role{font-size:10px;color:var(--muted);font-weight:500;margin-top:1px}
+  .exp-meta{font-size:9px;color:var(--muted);font-weight:500;white-space:nowrap}
+  .exp ul{list-style:none;margin-top:4px;display:flex;flex-direction:column;gap:2px}
+  .exp ul li{
+    position:relative;padding-left:10px;font-size:10px;line-height:1.5;color:#374151;
+  }
+  .exp ul li::before{
+    content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;
+    background:var(--accent-dark);
+  }
+  .exp .platforms{font-size:9px;color:var(--muted);margin-top:2px;font-style:italic}
+
+  /* Languages */
+  .lang-list{display:flex;flex-direction:column;gap:6px}
+  .lang{display:flex;justify-content:space-between;align-items:center;font-size:10px}
+  .lang b{font-weight:600}
+  .lang span{color:var(--muted)}
+  .bar{height:4px;border-radius:4px;background:rgba(31,41,55,.08);overflow:hidden;margin-top:3px}
+  .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-dark));border-radius:4px}
+
+  /* Right column highlight box */
+  .highlight{
+    margin-top:8px;padding:10px 12px;border-radius:10px;
+    background:linear-gradient(135deg, rgba(85,230,165,.15), rgba(85,230,165,.04));
+    border:1px solid rgba(85,230,165,.35);
+    font-size:9.5px;line-height:1.55;color:#0e5a3a;
+  }
+  .highlight b{color:#0a3d28}
+
+  footer.foot{
+    text-align:center;font-size:8.5px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:auto;padding-top:6px
+  }
+
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:#fff;padding:0}
+    .page{
+      width:210mm;height:297mm;min-height:297mm;border-radius:0;box-shadow:none;border:none;
+      padding:10mm 11mm;page-break-after:avoid;page-break-inside:avoid;break-inside:avoid;
+    }
+    section, .exp, header.top{break-inside:avoid;page-break-inside:avoid}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+
+    <header class="top">
+      <div>
+        <div class="name">Pedram Gholizadeh</div>
+        <div class="title"><b>Technical Lead</b> &nbsp;·&nbsp; <b>Backend Developer</b> &nbsp;·&nbsp; <b>Project Manager</b></div>
+        <div class="accent-bar"></div>
+        <div class="contact">
+          <span><b>Phone</b> +98 912 089 4404 &nbsp;&nbsp;|&nbsp;&nbsp; <b>Web</b> pedramgholizadeh.ir</span>
+          <span><b>Email</b> pedram@webiro.ir &nbsp;&nbsp;|&nbsp;&nbsp; pedramgholizadeh@gmail.com</span>
+        </div>
+        <div class="socials">
+          <div class="social-row">
+            <div class="d-flex skill skill-1">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.135-.3-.54-1.53.105-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.28-1.56 3.3-1.23 3.3-1.23.645 1.65.24 2.88.105 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.02-.08.01-.14-.03-.19-.04-.05-.1-.07-.17-.06-.07.01-1.36.87-3.84 2.6-.36.25-.69.37-.99.36-.33-.01-.95-.19-1.41-.35-.57-.18-1.02-.27-.99-.6.01-.18.26-.36.73-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                @PedramGholizadeh
+            </div>
+            <div class="d-flex skill skill-2">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                @PedramGholizade
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="avatar">PHOTO</div>
+    </header>
+
+    <section class="card summary">
+      <h2 class="section-title">Executive Summary</h2>
+      <p>Backend-focused technical leader with <b>10+ years</b> architecting and scaling high-traffic platforms across media, e-commerce, and SaaS. Specialist in <b>PHP/Laravel</b> ecosystems, distributed API design, caching strategies, and SSO/authentication at scale. Founder mindset with proven ownership across the full delivery lifecycle — from system design and team leadership to product strategy and shipping. Trusted to translate ambiguous business goals into resilient, observable, performant systems that grow with the organization.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Experience</h2>
+        <div class="exp-list">
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Webiro</div>
+                <div class="exp-role">Founder &amp; Technical Director</div>
+              </div>
+              <div class="exp-meta">Present</div>
+            </div>
+            <ul>
+              <li>Led architecture and delivery of <b>50+ digital products</b> across diverse industries.</li>
+              <li>Designed scalable backend systems and API infrastructures powering client platforms.</li>
+              <li>Owned technical strategy, client delivery, hiring, and system design decisions.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Tehransite</div>
+                <div class="exp-role">Co-Founder &amp; Engineering Lead</div>
+              </div>
+              <div class="exp-meta">Jan 2022 - Mar 2023</div>
+            </div>
+            <ul>
+              <li>Led engineering teams and defined backend architecture standards.</li>
+              <li>Built scalable web platforms and internal APIs for production workloads.</li>
+              <li>Managed end-to-end product delivery and release cadence.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Farakav Holding</div>
+                <div class="exp-role">Backend Engineer</div>
+                <div class="platforms">Platforms: Varzesh3 · Anten · Tamasha</div>
+              </div>
+              <div class="exp-meta">Oct 2020 - Mar 2022</div>
+            </div>
+            <ul>
+              <li>Built and optimized high-traffic backend services serving millions of users.</li>
+              <li>Designed <b>Redis caching strategies</b> and centralized <b>SSO authentication</b>.</li>
+              <li>Contributed to livestream infrastructure and real-time delivery services.</li>
+              <li>Developed crawler and data-aggregation pipelines for content platforms.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Iransite</div>
+                <div class="exp-role">Backend Lead · WordPress Engineering Manager</div>
+              </div>
+              <div class="exp-meta">Nov 2019 - Jul 2020</div>
+            </div>
+            <ul>
+              <li>Led backend engineering across <b>100+ client projects</b> and production systems.</li>
+              <li>Designed deployment pipelines, code standards, and architectural patterns.</li>
+              <li>Improved performance, reliability, and scalability of live platforms.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">ESNews</div>
+                <div class="exp-role">Developer &amp; Technical Engineer</div>
+              </div>
+              <div class="exp-meta">Nov 2018 - Aug 2019</div>
+            </div>
+            <ul>
+                <li>Managed and developed the <b>ESNews news platform</b>, ensuring stable performance and continuous feature delivery.</li>
+                <li>Built and maintained custom WordPress themes and plugins tailored for editorial workflows and content distribution.</li>
+                <li>Coordinated with content and SEO teams to optimize site structure, indexing, and overall search visibility.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Avrinet Digital Marketing Agency</div>
+                <div class="exp-role">Developer &amp; WordPress Developer</div>
+              </div>
+              <div class="exp-meta">Apr 2018 - Sep 2018</div>
+            </div>
+            <ul>
+                <li>Developed and delivered <b>custom WordPress websites</b> for clients, tailored to specific business requirements and functionalities.</li>
+                <li>Designed and implemented <b>bespoke WordPress plugins</b> to extend core CMS capabilities and support client-specific features.</li>
+                <li>Optimized website performance through advanced caching strategies, database tuning, and front-end performance improvements.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Alibaba</div>
+                <div class="exp-role">SEO &amp; Technical Systems Engineer</div>
+              </div>
+              <div class="exp-meta">Oct 2017 - Mar 2018</div>
+            </div>
+            <ul>
+              <li>Lifted competitive keyword rankings via technical and structural optimization.</li>
+              <li>Improved site performance, indexing architecture, and backend SEO systems.</li>
+            </ul>
+          </article>
+
+          <article class="exp">
+            <div class="exp-head">
+              <div>
+                <div class="exp-company">Other!</div>
+                <div class="exp-role">Developer &amp; WordPress Developer</div>
+                <div class="platforms">Companies: Saba Holding, Sargon Co, Ariyan</div>
+              </div>
+              <div class="exp-meta">Jul 2015 - Nov 2019</div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <aside style="display:flex;flex-direction:column;gap:10px">
+        <section class="card">
+          <h2 class="section-title">Core Skills</h2>
+          <div class="skills">
+            <span class="skill accent">Backend Architecture</span>
+            <span class="skill accent">System Design</span>
+            <span class="skill accent">Scalable Systems</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Laravel</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">Redis</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">Authentication</span>
+            <span class="skill">SSO</span>
+            <span class="skill">Performance Optimization</span>
+            <span class="skill">WordPress Engineering</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Git</span>
+            <span class="skill">CI/CD</span>
+            <span class="skill accent">Team Leadership</span>
+            <span class="skill accent">Product Ownership</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Languages</h2>
+          <div class="lang-list">
+            <div>
+              <div class="lang"><b>Persian</b><span>Native</span></div>
+              <div class="bar"><i style="width:100%"></i></div>
+            </div>
+            <div>
+              <div class="lang"><b>English</b><span>Fluent</span></div>
+              <div class="bar"><i style="width:88%"></i></div>
+            </div>
+            <div>
+              <div class="lang"><b>Turkish</b><span>Conversational</span></div>
+              <div class="bar"><i style="width:55%"></i></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Highlights</h2>
+          <div class="highlight">
+            <b>10+ yrs</b> backend leadership · <b>50+</b> products shipped · <b>100+</b> production deployments · architected SSO &amp; Redis caching for platforms serving millions.
+          </div>
+        </section>
+      </aside>
+    </div>
+
+  </main>
+</body>
+</html>

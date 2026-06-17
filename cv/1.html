@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedram Gholizadeh - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --accent: #55e6a5;
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .resume-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+        }
+
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(to right, #55e6a5, #22c55e);
+            border-radius: 9999px;
+        }
+
+        .skill-pill {
+            background: rgba(85, 230, 165, 0.1);
+            color: #1f2937;
+            border: 1px solid rgba(85, 230, 165, 0.3);
+        }
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0.4cm;
+            }
+            
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+            
+            .glass {
+                background: white !important;
+                backdrop-filter: none !important;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-zinc-100 py-8 flex items-center justify-center min-h-screen">
+    <div class="resume-container w-full bg-white border border-zinc-200 overflow-hidden" style="width: 210mm; min-height: 297mm;">
+        <!-- HEADER -->
+        <header class="glass border-b border-zinc-100 px-10 py-8 flex justify-between items-start">
+            <div class="flex-1">
+                <!-- Name -->
+                <h1 class="heading-font text-4xl font-semibold tracking-tighter text-[#1f2937] mb-1">Pedram Gholizadeh</h1>
+                <p class="text-xl text-zinc-600 font-medium">Technical Lead &amp; Backend Architect</p>
+                <p class="text-zinc-500 text-sm mt-0.5">Founder • Product Builder</p>
+                
+                <!-- Contact -->
+                <div class="mt-6 flex items-center gap-x-5 text-xs text-zinc-600 flex-wrap">
+                    <div class="flex items-center gap-x-1.5">
+                        <span class="font-medium">+98 912 089 4404</span>
+                    </div>
+                    <div class="w-px h-3 bg-zinc-300"></div>
+                    <a href="mailto:pedram@webiro.ir" class="hover:text-[#55e6a5]">pedram@webiro.ir</a>
+                    <div class="w-px h-3 bg-zinc-300"></div>
+                    <a href="mailto:pedramgholizadeh@gmail.com" class="hover:text-[#55e6a5]">pedramgholizadeh@gmail.com</a>
+                </div>
+                
+                <div class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-zinc-600">
+                    <a href="https://pedramgholizadeh.ir" target="_blank" class="hover:text-[#55e6a5] flex items-center gap-x-1">
+                        <span class="font-medium">pedramgholizadeh.ir</span>
+                    </a>
+                    <a href="https://linkedin.com/in/pedramgholizadeh" target="_blank" class="hover:text-[#55e6a5]">LinkedIn</a>
+                    <a href="https://github.com/pedramgholizadeh" target="_blank" class="hover:text-[#55e6a5]">GitHub</a>
+                    <a href="https://x.com/pedramgholizade" target="_blank" class="hover:text-[#55e6a5]">X</a>
+                    <a href="https://t.me/pedramgholizadeh" target="_blank" class="hover:text-[#55e6a5]">Telegram</a>
+                </div>
+            </div>
+            
+            <!-- Profile Image -->
+            <div class="w-28 h-28 rounded-2xl overflow-hidden border-4 border-white shadow-xl flex-shrink-0 glass flex items-center justify-center">
+                <div class="w-full h-full bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center text-zinc-400 text-xs font-medium text-center leading-tight">
+                    PROFESSIONAL<br>PHOTO
+                </div>
+            </div>
+        </header>
+        
+        <div class="grid grid-cols-12">
+            <!-- LEFT COLUMN -->
+            <div class="col-span-7 pl-10 pr-6 pt-7 pb-8 border-r border-zinc-100">
+                
+                <!-- SUMMARY -->
+                <section class="mb-8">
+                    <h2 class="section-header text-[#55e6a5] uppercase tracking-[0.5px] text-xs font-semibold mb-3">Executive Summary</h2>
+                    <p class="text-zinc-600 leading-relaxed text-[13.2px]">
+                        Seasoned Technical Lead and Backend Architect with 10+ years of experience designing and scaling high-traffic backend systems. 
+                        Expert in Laravel ecosystem architecture, API platforms, real-time services, and cloud-native infrastructure. 
+                        Proven founder who built and led technical teams delivering 50+ digital products. 
+                        Strong product mindset with deep ownership of technical strategy, team leadership, and end-to-end delivery.
+                    </p>
+                </section>
+                
+                <!-- EXPERIENCE -->
+                <section>
+                    <h2 class="section-header text-[#55e6a5] uppercase tracking-[0.5px] text-xs font-semibold mb-5">Experience</h2>
+                    
+                    <!-- WEBIRO -->
+                    <div class="mb-7">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <div>
+                                <div class="font-semibold text-zinc-800">WEBIRO</div>
+                                <div class="text-sm text-zinc-500">Founder &amp; Technical Director</div>
+                            </div>
+                            <div class="text-xs text-right text-zinc-500">2020 — Present</div>
+                        </div>
+                        <ul class="text-[13px] text-zinc-600 space-y-2 mt-3 pl-5 list-disc marker:text-[#55e6a5]">
+                            <li>Led end-to-end architecture and delivery of 50+ complex digital products for clients across multiple industries</li>
+                            <li>Designed scalable backend systems handling high concurrency and complex business workflows</li>
+                            <li>Defined technical strategy, mentored engineering teams, and established modern development practices</li>
+                            <li>Owned full product lifecycle from ideation to production deployment and performance monitoring</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- TEHRANSITE -->
+                    <div class="mb-7">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <div>
+                                <div class="font-semibold text-zinc-800">TEHRANSITE</div>
+                                <div class="text-sm text-zinc-500">Co-Founder &amp; Engineering Lead</div>
+                            </div>
+                            <div class="text-xs text-right text-zinc-500">2018 — 2020</div>
+                        </div>
+                        <ul class="text-[13px] text-zinc-600 space-y-2 mt-3 pl-5 list-disc marker:text-[#55e6a5]">
+                            <li>Built and scaled multiple web platforms with robust backend architecture and REST/GraphQL APIs</li>
+                            <li>Led cross-functional engineering teams responsible for product delivery and system reliability</li>
+                            <li>Architected infrastructure for high availability and performance under growing traffic</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- FARAKAV -->
+                    <div class="mb-7">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <div>
+                                <div class="font-semibold text-zinc-800">FARAKAV HOLDING</div>
+                                <div class="text-sm text-zinc-500">Backend Engineer — Varzesh3, Anten, Tamasha</div>
+                            </div>
+                            <div class="text-xs text-right text-zinc-500">2016 — 2018</div>
+                        </div>
+                        <ul class="text-[13px] text-zinc-600 space-y-2 mt-3 pl-5 list-disc marker:text-[#55e6a5]">
+                            <li>Designed and optimized high-traffic backend systems serving millions of users daily</li>
+                            <li>Implemented advanced Redis caching strategies and SSO authentication systems</li>
+                            <li>Developed real-time livestream infrastructure and data aggregation services</li>
+                            <li>Built robust web crawlers and content processing pipelines</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- IRANSITE -->
+                    <div class="mb-7">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <div>
+                                <div class="font-semibold text-zinc-800">IRANSITE</div>
+                                <div class="text-sm text-zinc-500">Backend Lead &amp; WordPress Engineering Manager</div>
+                            </div>
+                            <div class="text-xs text-right text-zinc-500">2014 — 2016</div>
+                        </div>
+                        <ul class="text-[13px] text-zinc-600 space-y-2 mt-3 pl-5 list-disc marker:text-[#55e6a5]">
+                            <li>Led backend engineering for 100+ client projects, establishing architectural standards</li>
+                            <li>Designed CI/CD pipelines and modern deployment processes</li>
+                            <li>Significantly improved performance and scalability across production environments</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- ALIBABA -->
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1">
+                            <div>
+                                <div class="font-semibold text-zinc-800">ALIBABA</div>
+                                <div class="text-sm text-zinc-500">SEO &amp; Technical Systems Engineer</div>
+                            </div>
+                            <div class="text-xs text-right text-zinc-500">2013 — 2014</div>
+                        </div>
+                        <ul class="text-[13px] text-zinc-600 space-y-1.5 mt-3 pl-5 list-disc marker:text-[#55e6a5]">
+                            <li>Optimized technical SEO infrastructure resulting in major ranking improvements</li>
+                            <li>Enhanced site performance, crawl efficiency and indexing architecture</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- RIGHT COLUMN -->
+            <div class="col-span-5 bg-zinc-50 py-7 pr-10 pl-6">
+                
+                <!-- SKILLS -->
+                <section class="mb-8">
+                    <h2 class="section-header text-[#55e6a5] uppercase tracking-[0.5px] text-xs font-semibold mb-4">Core Skills</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Backend Architecture</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Laravel</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">PHP</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">System Design</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">API Design</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">MySQL</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Redis</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Docker</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">CI/CD</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Team Leadership</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Scalable Systems</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Performance Tuning</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">SSO &amp; Auth</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Linux</div>
+                        <div class="skill-pill text-xs px-3 py-1.5 rounded-3xl font-medium">Product Ownership</div>
+                    </div>
+                </section>
+                
+                <!-- LANGUAGES -->
+                <section class="mb-8">
+                    <h2 class="section-header text-[#55e6a5] uppercase tracking-[0.5px] text-xs font-semibold mb-4">Languages</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-zinc-700">Persian</span>
+                                <span class="text-emerald-600 text-xs font-medium">Native</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-zinc-700">English</span>
+                                <span class="text-emerald-600 text-xs font-medium">Fluent</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-zinc-700">Turkish</span>
+                                <span class="text-emerald-600 text-xs font-medium">Conversational</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- EDUCATION / CERTS PLACEHOLDER -->
+                <section>
+                    <h2 class="section-header text-[#55e6a5] uppercase tracking-[0.5px] text-xs font-semibold mb-4">Additional Expertise</h2>
+                    <div class="text-xs leading-relaxed text-zinc-600 space-y-3">
+                        <div class="glass p-4 rounded-2xl border border-zinc-100">
+                            <div class="font-medium text-zinc-700">High-Traffic Systems</div>
+                            <div class="text-[12px] mt-1">Designed architectures serving millions of daily users at major Iranian media platforms</div>
+                        </div>
+                        <div class="glass p-4 rounded-2xl border border-zinc-100">
+                            <div class="font-medium text-zinc-700">Modern Tech Stack</div>
+                            <div class="text-[12px] mt-1">Laravel • PHP 8+ • Vue • Node.js • AWS • Kubernetes fundamentals</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="mt-auto pt-10 text-[10px] text-center text-zinc-400">
+                    Last updated June 2026
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Tailwind script already included via CDN
+        function initTailwind() {
+            console.log('%cResume ready for print. Press Ctrl/Cmd + P and save as PDF.', 'color:#55e6a5; font-family:monospace');
+        }
+        window.onload = initTailwind;
+    </script>
+</body>
+</html>
