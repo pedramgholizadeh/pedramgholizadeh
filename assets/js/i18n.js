@@ -9,11 +9,20 @@
   const dictionaries = new Map();
   let current = {};
 
+  // A deploy is only visible once the copies Cloudflare and the service worker
+  // kept are gone, and both key their cache on the full URL, so every data fetch
+  // carries the version stamped into index.html.
+  function assetUrl(path) {
+    if (!window.SITE_VERSION) return path;
+    return path + (path.indexOf('?') === -1 ? '?' : '&') + 'v=' + window.SITE_VERSION;
+  }
+  window.assetUrl = assetUrl;
+
   function loadDictionary(lang) {
     if (!dictionaries.has(lang)) {
       dictionaries.set(
         lang,
-        fetch('i18n/' + lang + '.json').then(function (response) {
+        fetch(assetUrl('i18n/' + lang + '.json')).then(function (response) {
           if (!response.ok) throw new Error('i18n/' + lang + '.json responded ' + response.status);
           return response.json();
         })

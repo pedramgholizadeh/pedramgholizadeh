@@ -31,6 +31,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Stamp asset versions
+        env:
+          SITE_VERSION: ${{ github.sha }}
+        # index.html is the only file Cloudflare never edge-caches, so the commit
+        # SHA is written into it here and every script, style and JSON fetch then
+        # carries it as a query string. Without this a deploy can sit invisible
+        # behind four hours of edge cache, which is what made translation look
+        # like it "only flips RTL".
+        run: |
+          sed -i "s|__SITE_VERSION__|${SITE_VERSION:0:8}|g" index.html
+          grep -q "SITE_VERSION = '${SITE_VERSION:0:8}'" index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

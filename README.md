@@ -30,8 +30,17 @@ The site is plain HTML/CSS/JS served by GitHub Pages, and it loads nothing from 
 - `data/open-source.json` — the repository list, with `descriptionFa` / `descriptionAr` kept by name across refreshes.
 - `node tools/refresh-data.mjs` — snapshots my GitHub repos and cross-checks `services.json` against apps.webiro.ir (run before a push when I want fresh stars/descriptions).
 - `node tools/fetch-fonts.mjs` — re-vendors the webfonts into `assets/fonts/web` after changing `assets/css/fonts.css` needs.
-- `sw.js` — caches what a visitor downloads; code and JSON revalidate in the background, images and fonts come from cache. Bump `CACHE` there when a rename must land immediately.
+- `sw.js` — caches what a visitor downloads; translations and JSON go to the network first, code and styles revalidate in the background, images and fonts come from cache. Bump `CACHE` there when a rename must land immediately.
 - `linkinbio/` shares `assets/` with the main page, so deleting a shared file there breaks both.
+
+### Why a deploy can look like it did nothing
+
+The domain sits behind Cloudflare, which edge-caches `.js`, `.css` and `.json` for four hours and serves them with `cache-control: max-age=14400` — so an un-versioned URL can keep answering with a copy of the *previous* deploy, and a stale `sw.js` or a stale `i18n/fa.json` is exactly what makes the site "only flip RTL" instead of translating.
+
+The Pages workflow replaces `__SITE_VERSION__` in `index.html` with the commit SHA (HTML itself is not edge-cached). Every script and style tag carries it as `?v=`, and `window.SITE_VERSION` lets `i18n.js` and `lists.js` version their JSON and `sw-register.js` version the worker URL. Cloudflare keys its cache on the full URL, so a new SHA is a guaranteed miss. Nothing to do by hand; if the token ever goes missing the workflow build fails rather than deploy a stale site.
+
+In the Cloudflare dashboard, set a Page Rule or Cache Rule to **Bypass cache for `/sw.js`** — a service worker is the one file that must never come from an edge cache.
+
 
 
 

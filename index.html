@@ -12,14 +12,23 @@
     <!-- Title  -->
     <title>Pedram Gholizadeh - پدرام قلی زاده</title>
     <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <!-- Rewritten with the commit SHA by the Pages workflow. HTML itself is never
+         edge-cached, so this is the one value a deploy can use to version everything
+         else below and every JSON fetch. -->
+    <script>
+        window.SITE_VERSION = '__SITE_VERSION__';
+        // Unsubstituted when the site is opened straight from disk or a preview,
+        // where nothing is cached in front of it anyway.
+        if (window.SITE_VERSION.indexOf('__') === 0) window.SITE_VERSION = '';
+    </script>
     <!-- Webfonts (self-hosted) -->
     <link rel="preload" href="assets/fonts/web/sora-latin-100-800.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <!-- Plugins -->
     <link rel="stylesheet" href="assets/css/plugins.css">
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=__SITE_VERSION__">
+    <link rel="stylesheet" href="assets/css/site.css?v=__SITE_VERSION__">
 </head>
 <body class="dots-waves">
     <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
@@ -443,10 +452,10 @@
     <!-- plugins -->
     <script src="assets/js/plugins.js" defer></script>
     <!-- custom scripts -->
-    <script src="assets/js/scripts.js" defer></script>
-    <script src="assets/js/i18n.js" defer></script>
-    <script src="assets/js/lists.js" defer></script>
-    <script src="assets/js/sw-register.js" defer></script>
+    <script src="assets/js/scripts.js?v=__SITE_VERSION__" defer></script>
+    <script src="assets/js/i18n.js?v=__SITE_VERSION__" defer></script>
+    <script src="assets/js/lists.js?v=__SITE_VERSION__" defer></script>
+    <script src="assets/js/sw-register.js?v=__SITE_VERSION__" defer></script>
     <script src="assets/js/wave.js" defer></script>
 </body>
 </html>

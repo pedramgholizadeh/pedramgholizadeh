@@ -87,7 +87,7 @@
     const t = window.siteLang.t;
     stateRow(node, 'loading', t('state.loading', 'Loading…'));
 
-    fetch(source.url)
+    fetch(window.assetUrl(source.url))
       .then(function (response) {
         if (!response.ok) throw new Error(source.url + ' responded ' + response.status);
         return response.json();
