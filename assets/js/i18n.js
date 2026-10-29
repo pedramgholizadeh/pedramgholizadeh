@@ -8,6 +8,9 @@
   const LANG_EVENT = 'site:lang';
   const dictionaries = new Map();
   let current = {};
+  // The language the page is actually showing, which starts as the English copy
+  // baked into index.html.
+  let applied = FALLBACK;
 
   // A deploy is only visible once the copies Cloudflare and the service worker
   // kept are gone, and both key their cache on the full URL, so every data fetch
@@ -20,13 +23,19 @@
 
   function loadDictionary(lang) {
     if (!dictionaries.has(lang)) {
-      dictionaries.set(
-        lang,
-        fetch(assetUrl('i18n/' + lang + '.json')).then(function (response) {
+      // A failure is dropped from the cache on the way out: a memoised rejection
+      // would answer every later switch with the same error, and the visitor is
+      // left with a page that changes direction but keeps the old copy.
+      const pending = fetch(assetUrl('i18n/' + lang + '.json'))
+        .then(function (response) {
           if (!response.ok) throw new Error('i18n/' + lang + '.json responded ' + response.status);
           return response.json();
         })
-      );
+        .catch(function (error) {
+          dictionaries.delete(lang);
+          throw error;
+        });
+      dictionaries.set(lang, pending);
     }
     return dictionaries.get(lang);
   }
@@ -107,19 +116,23 @@
 
   function setLang(lang) {
     var code = SUPPORTED.indexOf(lang) === -1 ? FALLBACK : lang;
-    document.documentElement.lang = code;
-    document.documentElement.dir = RIGHT_TO_LEFT.indexOf(code) === -1 ? 'ltr' : 'rtl';
-    markActiveButton(code);
 
+    // Direction, markup language and the pressed button move with the dictionary
+    // that proves the copy changed, so a slow or failed fetch can never leave the
+    // page flipped to RTL while it still reads English.
     return loadDictionary(code)
-      .then(applyDictionary)
-      .catch(function (error) {
-        // The HTML already carries the English copy, so a failed fetch is not fatal.
-        console.error('i18n:', error);
-      })
-      .then(function () {
+      .then(function (dictionary) {
+        applied = code;
+        document.documentElement.lang = code;
+        document.documentElement.dir = RIGHT_TO_LEFT.indexOf(code) === -1 ? 'ltr' : 'rtl';
+        markActiveButton(code);
+        applyDictionary(dictionary);
         localStorage.setItem(STORAGE_KEY, code);
         document.dispatchEvent(new CustomEvent(LANG_EVENT, { detail: { lang: code } }));
+      })
+      .catch(function (error) {
+        console.error('i18n:', error);
+        markActiveButton(applied);
       });
   }
 

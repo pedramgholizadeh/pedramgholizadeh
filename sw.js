@@ -46,7 +46,7 @@ self.addEventListener('fetch', (event) => {
         store(request, response);
         return response;
       } catch (offline) {
-        return (await caches.match(request)) || Response.error();
+        return (await cachedCopy(url.pathname)) || Response.error();
       }
     })());
     return;
@@ -84,4 +84,17 @@ async function staleWhileRevalidate(request) {
 
 function store(request, response) {
   return caches.open(CACHE).then((cache) => cache.put(request, response.clone()));
+}
+
+// Versioned URLs miss the cache on the first visit after a deploy, so the offline
+// fallback looks past the query: a slightly stale translation still beats an
+// empty section for a visitor with no network.
+async function cachedCopy(pathname) {
+  for (const key of await caches.keys()) {
+    const cache = await caches.open(key);
+    for (const entry of await cache.keys()) {
+      if (new URL(entry.url).pathname === pathname) return cache.match(entry);
+    }
+  }
+  return null;
 }
