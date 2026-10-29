@@ -2,6 +2,26 @@
   "generatedAt": "2026-10-29",
   "repos": [
     {
+      "name": "curated-skills",
+      "url": "https://github.com/pedramgholizadeh/curated-skills",
+      "description": "A curated collection of AI agent skills, tools, and workflows I personally use and recommend. Open source, practical, and continuously evolving.",
+      "descriptionFa": "مجموعه‌ای منتخب از مهارت‌ها، ابزارها و گردش‌کارهای عامل‌های هوش مصنوعی.",
+      "descriptionAr": "مجموعة منسّقة من مهارات وأدوات ومسير عمل وكلاء الذكاء الاصطناعي.",
+      "language": "JavaScript",
+      "stars": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "name": "himym-rewatch",
+      "url": "https://github.com/pedramgholizadeh/himym-rewatch",
+      "description": "Episode guide for rewatching How I Met Your Mother.",
+      "descriptionFa": "راهنمای اپیزودها برای تماشای دوبارهٔ چطور مامانت رو آشنا شدم.",
+      "descriptionAr": "دليل حلقات لإعادة مشاهدة How I Met Your Mother.",
+      "language": "HTML",
+      "stars": 0,
+      "updated": "2026-10-28"
+    },
+    {
       "name": "PersianNationalCodeGenerator",
       "url": "https://github.com/pedramgholizadeh/PersianNationalCodeGenerator",
       "description": "check persian nationalcode / generate fake nationalcode !",
@@ -10,6 +30,16 @@
       "language": "HTML",
       "stars": 14,
       "updated": "2023-07-01"
+    },
+    {
+      "name": "PayViro",
+      "url": "https://github.com/pedramgholizadeh/PayViro",
+      "description": "GateWay Service for Payments",
+      "descriptionFa": "سرویس درگاه پرداخت.",
+      "descriptionAr": "خدمة بوابة للدفع الإلكتروني.",
+      "language": "PHP",
+      "stars": 0,
+      "updated": "2026-10-27"
     },
     {
       "name": "ToshiMoshi-Bot",
@@ -41,36 +71,9 @@
       "stars": 1,
       "updated": "2024-06-12"
     },
-    {
-      "name": "curated-skills",
-      "url": "https://github.com/pedramgholizadeh/curated-skills",
-      "description": "A curated collection of AI agent skills, tools, and workflows I personally use and recommend. Open source, practical, and continuously evolving.",
-      "descriptionFa": "مجموعه‌ای منتخب از مهارت‌ها، ابزارها و گردش‌کارهای عامل‌های هوش مصنوعی.",
-      "descriptionAr": "مجموعة منسّقة من مهارات وأدوات ومسير عمل وكلاء الذكاء الاصطناعي.",
-      "language": "JavaScript",
-      "stars": 0,
-      "updated": "2026-10-29"
-    },
-    {
-      "name": "himym-rewatch",
-      "url": "https://github.com/pedramgholizadeh/himym-rewatch",
-      "description": "Episode guide for rewatching How I Met Your Mother.",
-      "descriptionFa": "راهنمای اپیزودها برای تماشای دوبارهٔ چطور مامانت رو آشنا شدم.",
-      "descriptionAr": "دليل حلقات لإعادة مشاهدة How I Met Your Mother.",
-      "language": "HTML",
-      "stars": 0,
-      "updated": "2026-10-28"
-    },
-    {
-      "name": "PayViro",
-      "url": "https://github.com/pedramgholizadeh/PayViro",
-      "description": "GateWay Service for Payments",
-      "descriptionFa": "سرویس درگاه پرداخت.",
-      "descriptionAr": "خدمة بوابة للدفع الإلكتروني.",
-      "language": "PHP",
-      "stars": 0,
-      "updated": "2026-10-27"
-    },
+    
+    
+    
     {
       "name": "shabdiz-app",
       "url": "https://github.com/pedramgholizadeh/shabdiz-app",

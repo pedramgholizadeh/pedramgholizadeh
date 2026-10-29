@@ -17,7 +17,7 @@
   "hero.greeting": "Hello, I’m",
   "hero.backend": ", Back-end Developer",
   "hero.and": "and",
-  "hero.wordpress": "WP Developer",
+  "hero.wordpress": "a Simple Developer",
   "hero.based": "Based in IRAN.",
   "hero.years": "Years of experience",
   "hero.clients": "Clients worldwide",
@@ -103,7 +103,7 @@
     "SEMRush",
     "ahrefs"
   ],
-  "own.title": "Services I Own",
+  "own.title": "Businesses!",
   "repos.title": "Open Source",
   "repos.all": "All repositories on GitHub",
   "repos.stars": "stars",
@@ -121,6 +121,6 @@
   "contact.social.linkedin": "LinkedIn",
   "contact.social.github": "Github",
   "contact.social.youtube": "YouTube",
-  "footer.hosted": "© 2025 — Proudly hosted by",
+  "footer.hosted": "© 2026 — Proudly hosted by",
   "footer.cloud": "cloud servers"
 }
