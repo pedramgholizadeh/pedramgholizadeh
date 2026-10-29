@@ -1,0 +1,101 @@
+{
+  "generatedAt": "2026-10-29",
+  "repos": [
+    {
+      "name": "PersianNationalCodeGenerator",
+      "url": "https://github.com/pedramgholizadeh/PersianNationalCodeGenerator",
+      "description": "check persian nationalcode / generate fake nationalcode !",
+      "language": "HTML",
+      "stars": 14,
+      "updated": "2023-07-01"
+    },
+    {
+      "name": "ToshiMoshi-Bot",
+      "url": "https://github.com/pedramgholizadeh/ToshiMoshi-Bot",
+      "description": "a simple telegram bot , like notcoin , collect score with tap!",
+      "language": "PHP",
+      "stars": 7,
+      "updated": "2024-07-07"
+    },
+    {
+      "name": "chat-deepseek-rtl-fixer-chrome",
+      "url": "https://github.com/pedramgholizadeh/chat-deepseek-rtl-fixer-chrome",
+      "description": "Chrome Extentions: RTL Fixer!",
+      "language": "JavaScript",
+      "stars": 1,
+      "updated": "2025-01-27"
+    },
+    {
+      "name": "WordPress-AutoLogin-Service",
+      "url": "https://github.com/pedramgholizadeh/WordPress-AutoLogin-Service",
+      "description": null,
+      "language": "PHP",
+      "stars": 1,
+      "updated": "2024-06-12"
+    },
+    {
+      "name": "curated-skills",
+      "url": "https://github.com/pedramgholizadeh/curated-skills",
+      "description": "A curated collection of AI agent skills, tools, and workflows I personally use and recommend. Open source, practical, and continuously evolving.",
+      "language": "JavaScript",
+      "stars": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "name": "himym-rewatch",
+      "url": "https://github.com/pedramgholizadeh/himym-rewatch",
+      "description": null,
+      "language": "HTML",
+      "stars": 0,
+      "updated": "2026-10-28"
+    },
+    {
+      "name": "PayViro",
+      "url": "https://github.com/pedramgholizadeh/PayViro",
+      "description": "GateWay Service for Payments",
+      "language": "PHP",
+      "stars": 0,
+      "updated": "2026-10-27"
+    },
+    {
+      "name": "shabdiz-app",
+      "url": "https://github.com/pedramgholizadeh/shabdiz-app",
+      "description": null,
+      "language": "Dart",
+      "stars": 0,
+      "updated": "2026-10-26"
+    },
+    {
+      "name": "hamkar-chrome",
+      "url": "https://github.com/pedramgholizadeh/hamkar-chrome",
+      "description": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "updated": "2026-10-25"
+    },
+    {
+      "name": "webiro-laravel",
+      "url": "https://github.com/pedramgholizadeh/webiro-laravel",
+      "description": null,
+      "language": "PHP",
+      "stars": 0,
+      "updated": "2026-08-14"
+    },
+    {
+      "name": "diet-ai-platform",
+      "url": "https://github.com/pedramgholizadeh/diet-ai-platform",
+      "description": null,
+      "language": "HTML",
+      "stars": 0,
+      "updated": "2026-07-20"
+    },
+    {
+      "name": "webnova-ai-made",
+      "url": "https://github.com/pedramgholizadeh/webnova-ai-made",
+      "description": null,
+      "language": "Astro",
+      "stars": 0,
+      "updated": "2026-07-16"
+    }
+  ]
+}

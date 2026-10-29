@@ -1,0 +1,58 @@
+{
+  "meta.title": "Pedram Gholizadeh - پدرام قلی زاده",
+  "meta.description": "Pedram Gholizadeh, a skilled developer & SEO enthusiast, crafts custom websites & boosts rankings with clean code & smart strategies.",
+
+  "nav.about": "About",
+  "nav.experience": "Experience",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+
+  "hero.greeting": "Hello, I’m",
+  "hero.backend": ", Back-end Developer",
+  "hero.and": "and",
+  "hero.wordpress": "WP Developer",
+  "hero.based": "Based in IRAN.",
+  "hero.years": "Years of experience",
+  "hero.clients": "Clients worldwide",
+  "hero.cv": "Download C.V",
+  "hero.aboutTitle": "About ME.",
+  "hero.aboutText": "I'm a creative developer with a passion for crafting innovative solutions that make a real impact on people's lives, always chasing new challenges and learning cutting-edge tech to bring ideas to life. I'm a big believer in <b>open-source</b>, dedicated to <b>internet freedom</b>, and committed to <b>free expression</b>.",
+
+  "exp.title": "Work Experience",
+  "exp.present": "Present",
+  "exp.role.projectManager": "Project Manager",
+  "exp.role.cofounderTechLead": "Co-Founder, Tech Lead",
+  "exp.role.cofounderDeveloper": "Co-Founder, Developer",
+  "exp.role.seniorDeveloper": "Senior Developer",
+  "exp.role.contentSpecialist": "Content Specialist",
+  "exp.role.seoSpecialist": "SEO Specialist",
+  "exp.role.techLeadDeveloper": "Tech Lead, Developer",
+  "exp.role.wordpressDeveloper": "WordPress Developer",
+  "exp.role.webDeveloper": "Web Developer",
+  "exp.role.websiteManager": "Website Manager",
+
+  "services.title": "Skills",
+  "services.wp.title": "WordPress!",
+  "services.wp.desc": "I’m a total WordPress rockstar, whipping up custom solutions like nobody’s business. Whether it’s coding bespoke plugins to add killer features or designing sleek, responsive themes from the ground up, I’ve got the skills to make it happen. I can dive into the nitty-gritty of WordPress to optimize performance, integrate APIs, or build complex functionality that makes sites stand out. My code is clean, efficient, and ready to bring any vision to life with a professional edge.",
+  "services.php.title": "PHP",
+  "services.php.desc": "I’m a PHP pro who can spin up robust, scalable solutions like it’s a walk in the park. From crafting custom applications to building dynamic, database-driven websites, I know my way around PHP like the back of my hand. Whether it’s coding complex backend logic, integrating APIs, or optimizing performance for high-traffic sites, I deliver clean, secure, and efficient code that gets the job done. My knack for problem-solving means I can tackle any challenge and make your project shine.",
+  "services.seo.title": "SEO",
+  "services.seo.desc": "I’m an SEO rockstar who knows how to skyrocket websites to the top of search results. From nailing on-page optimization to crafting killer content strategies, I’ve got the skills to boost rankings and drive organic traffic like nobody’s business. I dive deep into keyword research, technical SEO, and link-building to make sure sites perform at their peak. My data-driven approach means I can fine-tune every detail to get your website seen and keep it ahead of the game.",
+
+  "projects.owned.title": "Products I Own",
+  "projects.oss.title": "Open Source",
+  "projects.oss.all": "All repositories on GitHub",
+
+  "state.loading": "Loading…",
+  "state.empty": "Nothing here yet.",
+  "state.error": "Could not load this right now.",
+  "state.retry": "Retry",
+
+  "contact.kicker": "Get In Touch",
+  "contact.heading": "Let's make your brand brilliant!",
+  "contact.text": "If you would like to work with us or just want to get in touch, we’d love to hear from you!",
+
+  "footer.hosted": "© 2025 — Proudly hosted by",
+  "footer.cloud": "cloud servers"
+}

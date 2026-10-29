@@ -1,0 +1,126 @@
+/* Project data sections, language switcher and right-to-left support. */
+
+/* ---------- language switcher ---------- */
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  margin-left: 20px;
+}
+
+.lang-btn {
+  padding: 5px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.lang-btn:hover {
+  border-color: var(--maincolor);
+}
+
+.lang-btn[aria-pressed="true"] {
+  background: var(--maincolor);
+  border-color: var(--maincolor);
+  color: #1d1d1d;
+}
+
+@media (max-width: 991px) {
+  .lang-switch {
+    margin: 15px 0 0;
+  }
+}
+
+/* ---------- project cards ---------- */
+.portfolio .item .cont .projects-summary {
+  margin: 8px 0 0;
+  max-width: 32ch;
+  opacity: 0.7;
+}
+
+.portfolio .item .cont .projects-stars {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.projects-stars .icon-star {
+  width: 12px;
+  height: 12px;
+  fill: var(--maincolor);
+  vertical-align: -2px;
+  margin-right: 5px;
+}
+
+/* Projects without a logo in projects.json get a letter tile in their place. */
+.portfolio .item .img .proj-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 19 / 10;
+  font-size: 64px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 5px;
+}
+
+.projects-state {
+  opacity: 0.7;
+}
+
+/* ---------- sprite icons ---------- */
+.author-profile .social a svg,
+.navbar .icon-bar {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.navbar .icon-bar {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+}
+
+/* ---------- right-to-left languages ---------- */
+[dir="rtl"] body {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+/* The template only ships physical spacing utilities, so RTL mirrors them. */
+[dir="rtl"] .ml-5 { margin-left: 0 !important; margin-right: 5px !important; }
+[dir="rtl"] .ml-10 { margin-left: 0 !important; margin-right: 10px !important; }
+[dir="rtl"] .ml-30 { margin-left: 0 !important; margin-right: 30px !important; }
+[dir="rtl"] .ml-50 { margin-left: 0 !important; margin-right: 50px !important; }
+[dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+
+[dir="rtl"] .mr-5 { margin-right: 0 !important; margin-left: 5px !important; }
+[dir="rtl"] .mr-10 { margin-right: 0 !important; margin-left: 10px !important; }
+[dir="rtl"] .mr-20 { margin-right: 0 !important; margin-left: 20px !important; }
+[dir="rtl"] .mr-30 { margin-right: 0 !important; margin-left: 30px !important; }
+[dir="rtl"] .mr-40 { margin-right: 0 !important; margin-left: 40px !important; }
+[dir="rtl"] .mr-60 { margin-right: 0 !important; margin-left: 60px !important; }
+[dir="rtl"] .mr-100 { margin-right: 0 !important; margin-left: 100px !important; }
+
+[dir="rtl"] .offset-lg-1 {
+  margin-left: 0;
+  margin-right: 8.333333%;
+}
+
+[dir="rtl"] .lang-switch {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+[dir="rtl"] .projects-stars .icon-star {
+  margin-right: 0;
+  margin-left: 5px;
+}

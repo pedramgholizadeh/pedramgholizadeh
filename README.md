@@ -8,8 +8,6 @@ Pedram Gholizadeh
 
 - 🔭 Personal Web + Resume [Pedram Gholizadeh](https://pedramgholizadeh.ir) 
 
-- 🔭 My Blog [Visit](https://pedramgholizadeh.ir/blog)
-
 - 🔭 Project Manager [Webiro Creativity Agency](https://webiro.ir)
 
 - 🌱 I’m currently learning **Everything :D**
@@ -22,6 +20,18 @@ Pedram Gholizadeh
 
 <br><br><br>
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=pedramgholizadeh&show_icons=true&locale=en&layout=compact" alt="pedramgholizadeh" /></p>
+
+## Maintaining this site
+
+The site is plain HTML/CSS/JS served by GitHub Pages, and it loads nothing from another host — no Google Fonts, no CDNs, no analytics.
+
+- `projects.json` — the projects I own. One entry per project: `logo`, `nameEn`, `nameFa`, `domain`, `description`. Leave `logo` empty and the card shows a letter tile.
+- `i18n/en.json`, `i18n/fa.json`, `i18n/ar.json` — every string on the page; the header switcher picks one and remembers it. English is the default and the copy baked into `index.html`.
+- `node tools/refresh-data.mjs` — snapshots my GitHub repos into `data/open-source.json` (run before a push when I want fresh stars/descriptions).
+- `node tools/fetch-fonts.mjs` — re-vendors the webfonts into `assets/fonts/web` after changing `assets/css/fonts.css` needs.
+- `sw.js` — caches what a visitor downloads; code and JSON revalidate in the background, images and fonts come from cache. Bump `CACHE` there when a rename must land immediately.
+- `linkinbio/` shares `assets/` with the main page, so deleting a shared file there breaks both.
+
 
 
 

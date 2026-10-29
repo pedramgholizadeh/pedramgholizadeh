@@ -1,0 +1,109 @@
+{
+  "projects": [
+    {
+      "logo": "assets/imgs/works/webiro.ir_.webp",
+      "nameEn": "WEBIRO Creativity Agency",
+      "nameFa": "آژانس خلاقیت وبیرو",
+      "domain": "webiro.ir",
+      "description": "Design, development and digital marketing studio."
+    },
+    {
+      "logo": "",
+      "nameEn": "Webiro Apps",
+      "nameFa": "محصولات وبیرو",
+      "domain": "apps.webiro.ir",
+      "description": "Products Webiro has built or sponsored."
+    },
+    {
+      "logo": "assets/imgs/works/dataak.com_.webp",
+      "nameEn": "Dataak Corp.",
+      "nameFa": "داده‌اک",
+      "domain": "dataak.com",
+      "description": "Corporate website built on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/www.varzesh3.com_.png",
+      "nameEn": "Varzesh3 News Agency",
+      "nameFa": "ورزش سه‌جی",
+      "domain": "varzesh3.com",
+      "description": "Sports news platform — content and SEO."
+    },
+    {
+      "logo": "assets/imgs/works/pishbini.varzesh3.com_.webp",
+      "nameEn": "Pishbini Varzesh3",
+      "nameFa": "پیش‌بینی ورزش سه‌جی",
+      "domain": "pishbini.varzesh3.com",
+      "description": "Match-prediction game."
+    },
+    {
+      "logo": "assets/imgs/works/30rang.art_.webp",
+      "nameEn": "30rang Art Academy",
+      "nameFa": "آکادمی سی‌رنگ",
+      "domain": "30rang.art",
+      "description": "Art academy website on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/majidazadbakht.com_.webp",
+      "nameEn": "Majid Azadbakht Platform",
+      "nameFa": "پلتفرم مجید آزادبخت",
+      "domain": "majidazadbakht.com",
+      "description": "Personal brand platform on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/elegancecoffee.academy_.webp",
+      "nameEn": "Elegance Coffee Academy",
+      "nameFa": "آکادمی قهوه الگنس",
+      "domain": "elegancecoffee.academy",
+      "description": "Coffee education academy on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/keshmoon.com_.webp",
+      "nameEn": "Keshmoon",
+      "nameFa": "کشمون",
+      "domain": "keshmoon.com",
+      "description": "Custom website development project."
+    },
+    {
+      "logo": "assets/imgs/works/www.buskool.com_.png",
+      "nameEn": "Buskool",
+      "nameFa": "باسکول",
+      "domain": "buskool.com",
+      "description": "Custom website development project."
+    },
+    {
+      "logo": "assets/imgs/works/higlc.ir_.webp",
+      "nameEn": "HIGLC English Academy",
+      "nameFa": "آکادمی زبان هاگلک",
+      "domain": "higlc.ir",
+      "description": "Language academy on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/rabinhome.com_.webp",
+      "nameEn": "Rabinhome",
+      "nameFa": "ربین‌هوم",
+      "domain": "rabinhome.com",
+      "description": "Home and furniture brand on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/mahestan-group.com_.webp",
+      "nameEn": "Mahestan Group",
+      "nameFa": "گروه مهستان",
+      "domain": "mahestan-group.com",
+      "description": "Corporate website on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/mehregansabt.com_.webp",
+      "nameEn": "Mehregan Sabt Corp.",
+      "nameFa": "مهرگان ثبت",
+      "domain": "mehregansabt.com",
+      "description": "Company-registration services on WordPress."
+    },
+    {
+      "logo": "assets/imgs/works/www.gymcenter.ir_.png",
+      "nameEn": "Gym Center Club",
+      "nameFa": "باشگاه جیم سنتر",
+      "domain": "gymcenter.ir",
+      "description": "Sports club website on WordPress."
+    }
+  ]
+}
