@@ -1,4 +1,4 @@
-const CACHE = 'pedramgholizadeh-v1';
+const CACHE = 'pedramgholizadeh-v2';
 
 self.addEventListener('install', () => self.skipWaiting());
 

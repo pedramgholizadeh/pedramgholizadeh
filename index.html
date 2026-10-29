@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body class="dots-waves">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
         <symbol id="i-arrow" viewBox="0 0 34.2 32.3">
             <line x1="0" y1="16" x2="33" y2="16"></line>
@@ -57,7 +58,7 @@
             <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
         <div class="loader-wrap-heading">
-            <div class="load-text">
+            <div class="load-text" data-i18n="loader.text">
                 <span>L</span>
                 <span>o</span>
                 <span>a</span>
@@ -86,7 +87,7 @@
                 <img src="assets/imgs/logo-light.png" alt="logo" width="263" height="47">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-i18n-aria="a11y.menu">
                 <svg class="icon-bar" aria-hidden="true"><use href="#i-bars"></use></svg>
             </button>
             <!-- navbar links -->
@@ -102,29 +103,25 @@
                         <a class="nav-link" href="#0" data-scroll-nav="2"><span class="rolling-text" data-i18n="nav.skills">Skills</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#0" data-scroll-nav="3"><span class="rolling-text" data-i18n="nav.projects">Projects</span></a>
+                        <a class="nav-link" href="#0" data-scroll-nav="3"><span class="rolling-text" data-i18n="nav.services">Services</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#0" data-scroll-nav="4"><span class="rolling-text" data-i18n="nav.contact">Contact</span></a>
+                        <a class="nav-link" href="#0" data-scroll-nav="4"><span class="rolling-text" data-i18n="nav.opensource">Open Source</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#0" data-scroll-nav="5"><span class="rolling-text" data-i18n="nav.contact">Contact</span></a>
                     </li>
                 </ul>
             </div>
-            <div class="lang-switch" role="group" aria-label="Language">
+            <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="nav.language">
                 <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
                 <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false" lang="fa">فارسی</button>
                 <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false" lang="ar">العربية</button>
             </div>
-            <div class="md-hide">
-                <div class="butn-presv">
-                    <a href="https://daramet.com/pedram" class="butn butn-sm butn-bg bg-white radius-5 skew" target="_blank">
-                        <span class="text-dark">Donate</span>
-                    </a>
-                </div>
-            </div>
         </div>
     </nav>
     <!-- ==================== End Navbar ==================== -->
-    <main>
+    <main id="main">
         <!-- ==================== Start main box ==================== -->
         <section class="box">
             <div class="container">
@@ -136,14 +133,14 @@
                                     <img src="assets/imgs/pedram.webp" alt="Pedram Gholizadeh" width="800" height="800" fetchpriority="high" decoding="async">
                                 </div>
                                 <div class="info text-center mt-30">
-                                    <h5>Pedram Gholizadeh</h5>
-                                    <p><a href="#0">4 December 1997</a></p>
+                                    <h5 data-i18n="profile.name">Pedram Gholizadeh</h5>
+                                    <p><a href="#0" data-i18n="profile.birthdate">4 December 1997</a></p>
                                 </div>
                                 <div class="social text-center mt-20">
-                                    <a href="https://t.me/pedramgholizadeh" aria-label="Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
-                                    <a href="https://x.com/pedramgholizade" aria-label="X"><svg class="icon" aria-hidden="true"><use href="#i-twitter"></use></svg></a>
-                                    <a href="https://www.linkedin.com/in/pedramgholizadeh" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
-                                    <a href="https://instagram.com/pedramgholizadeh" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+                                    <a href="https://t.me/pedramgholizadeh" aria-label="Telegram" data-i18n-aria="contact.social.telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+                                    <a href="https://x.com/pedramgholizade" aria-label="X" data-i18n-aria="contact.social.x"><svg class="icon" aria-hidden="true"><use href="#i-twitter"></use></svg></a>
+                                    <a href="https://www.linkedin.com/in/pedramgholizadeh" aria-label="LinkedIn" data-i18n-aria="contact.social.linkedin"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
+                                    <a href="https://instagram.com/pedramgholizadeh" aria-label="Instagram" data-i18n-aria="contact.social.instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +149,7 @@
                         <!-- ==================== Start about ==================== -->
                         <div class="about section-padding" data-scroll-index="0">
                             <div class="cont">
-                                <h1><span data-i18n="hero.greeting">Hello, I’m</span> <span class="main-color">Pedram Gholizadeh</span><span
+                                <h1><span data-i18n="hero.greeting">Hello, I’m</span> <span class="main-color" data-i18n="profile.name">Pedram Gholizadeh</span><span
                                         data-i18n="hero.backend">, Back-end Developer</span> <span data-i18n="hero.and">and</span> <span class="bord"><span
                                         data-i18n="hero.wordpress">WP Developer</span><i></i></span> <span data-i18n="hero.based">Based in IRAN.</span></h1>
                             </div>
@@ -192,266 +189,84 @@
                             <div class="sec-head bord-thin-bottom pb-20 mb-80">
                                 <h4 class="sub-title fz-28" data-i18n="exp.title">Work Experience</h4>
                             </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13" data-i18n="exp.present">Present</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.projectManager">Project Manager</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>WEBIRO</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://webiro.ir" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Jan 2022 - Mar 2023</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.cofounderTechLead">Co-Founder, Tech Lead</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>TEHRANSITE</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://tehransite.com" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Oct 2020 - Mar 2022</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.seniorDeveloper">Senior Developer</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Anten</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://anten.ir" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Oct 2020 - Oct 2021</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.contentSpecialist">Content Specialist</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Varzesh3</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://varzesh3.com" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Oct 2020 - Oct 2021</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.seoSpecialist">SEO Specialist</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Bazar3</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://bazar3.com" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Nov 2019 - Jul 2020</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.seniorDeveloper">Senior Developer</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>IRANSITE</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://iransite.com" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Nov 2018 - Aug 2019</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.techLeadDeveloper">Tech Lead, Developer</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>ESNews</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://esnews.ir" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Apr 2018 - Sep 2018</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.wordpressDeveloper">WordPress Developer</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Avrinet</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://avrinet.com" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Oct 2017 - Mar 2018</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.seoSpecialist">SEO Specialist</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Alibaba</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://alibaba.ir" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Aug 2017 - Nov 2019</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.cofounderDeveloper">Co-Founder, Developer</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Maxeer</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://maxeer.ir" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">May 2017 - Nov 2017</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.webDeveloper">Web Developer</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Saba Holding</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="#0" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Apr 2016 - Sep 2016</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.webDeveloper">Web Developer</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Sargon</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="https://sargonco.com" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item d-flex align-items-center mb-30">
-                                <div class="date mr-60">
-                                    <p class="fz-13">Jul 2015 - Nov 2015</p>
-                                </div>
-                                <div>
-                                    <h6><a href="#0" data-i18n="exp.role.websiteManager">Website Manager</a></h6>
-                                </div>
-                                <div class="ml-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="icon-img-40 mr-100">
-                                            <p>Ariyan</p>
-                                        </div>
-                                        <div class="arrow">
-                                            <a href="#0" rel="nofollow" target="_blank">
-                                                <svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <ul class="exp-list">
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.present">Present</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.projectManager">Project Manager</h6>
+                                    <span class="exp-org" data-i18n="exp.org.webiro">WEBIRO</span>
+                                    <a class="exp-link" href="https://webiro.ir" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2022-2023">Jan 2022 – Mar 2023</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.cofounderTechLead">Co-Founder, Tech Lead</h6>
+                                    <span class="exp-org" data-i18n="exp.org.tehransite">TEHRANSITE</span>
+                                    <a class="exp-link" href="https://tehransite.com" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2020-2022">Oct 2020 – Mar 2022</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.seniorDeveloper">Senior Developer</h6>
+                                    <span class="exp-org" data-i18n="exp.org.anten">Anten</span>
+                                    <a class="exp-link" href="https://anten.ir" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2020-2021">Oct 2020 – Oct 2021</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.contentSpecialist">Content Specialist</h6>
+                                    <span class="exp-org" data-i18n="exp.org.varzesh3">Varzesh3</span>
+                                    <a class="exp-link" href="https://varzesh3.com" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2020-2021">Oct 2020 – Oct 2021</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.seoSpecialist">SEO Specialist</h6>
+                                    <span class="exp-org" data-i18n="exp.org.bazar3">Bazar3</span>
+                                    <a class="exp-link" href="https://bazar3.com" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2019-2020">Nov 2019 – Jul 2020</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.seniorDeveloper">Senior Developer</h6>
+                                    <span class="exp-org" data-i18n="exp.org.iransite">IRANSITE</span>
+                                    <a class="exp-link" href="https://iransite.com" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2018-2019">Nov 2018 – Aug 2019</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.techLeadDeveloper">Tech Lead, Developer</h6>
+                                    <span class="exp-org" data-i18n="exp.org.esnews">ESNews</span>
+                                    <a class="exp-link" href="https://esnews.ir" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2018">Apr 2018 – Sep 2018</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.wordpressDeveloper">WordPress Developer</h6>
+                                    <span class="exp-org" data-i18n="exp.org.avrinet">Avrinet</span>
+                                    <a class="exp-link" href="https://avrinet.com" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2017-2018">Oct 2017 – Mar 2018</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.seoSpecialist">SEO Specialist</h6>
+                                    <span class="exp-org" data-i18n="exp.org.alibaba">Alibaba</span>
+                                    <a class="exp-link" href="https://alibaba.ir" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2017-2019">Aug 2017 – Nov 2019</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.cofounderDeveloper">Co-Founder, Developer</h6>
+                                    <span class="exp-org" data-i18n="exp.org.maxeer">Maxeer</span>
+                                    <a class="exp-link" href="https://maxeer.ir" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2017">May 2017 – Nov 2017</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.webDeveloper">Web Developer</h6>
+                                    <span class="exp-org" data-i18n="exp.org.sabaholding">Saba Holding</span>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2016">Apr 2016 – Sep 2016</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.webDeveloper">Web Developer</h6>
+                                    <span class="exp-org" data-i18n="exp.org.sargon">Sargon</span>
+                                    <a class="exp-link" href="https://sargonco.com" target="_blank" rel="nofollow noopener" aria-label="Visit website" data-i18n-aria="a11y.visit"><svg class="arrow-right" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+                                </li>
+                                <li class="exp-item">
+                                    <span class="exp-date" data-i18n="exp.d.2015">Jul 2015 – Nov 2015</span>
+                                    <h6 class="exp-role" data-i18n="exp.role.websiteManager">Website Manager</h6>
+                                    <span class="exp-org" data-i18n="exp.org.ariyan">Ariyan</span>
+                                </li>
+                            </ul>
                         </div>
                         <!-- ==================== End Resume ==================== -->
 
@@ -473,10 +288,10 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="item md-mb30">
-                            <h3 class="letr">W</h3>
+                            <h3 class="letr" aria-hidden="true">W</h3>
                             <h6 data-i18n="services.wp.title">WordPress!</h6>
                             <p data-i18n="services.wp.desc">I’m a total WordPress rockstar, whipping up custom solutions like nobody’s business. Whether it’s coding bespoke plugins to add killer features or designing sleek, responsive themes from the ground up, I’ve got the skills to make it happen. I can dive into the nitty-gritty of WordPress to optimize performance, integrate APIs, or build complex functionality that makes sites stand out. My code is clean, efficient, and ready to bring any vision to life with a professional edge.</p>
-                            <div class="tags">
+                            <div class="tags" data-i18n-list="services.wp.tags">
                                 <a href="#0">Custom Plugin</a>
                                 <a href="#0">Theme Development</a>
                                 <a href="#0">API</a>
@@ -491,10 +306,10 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="item md-mb30">
-                            <h3 class="letr">P</h3>
+                            <h3 class="letr" aria-hidden="true">P</h3>
                             <h6 data-i18n="services.php.title">PHP</h6>
                             <p data-i18n="services.php.desc">I’m a PHP pro who can spin up robust, scalable solutions like it’s a walk in the park. From crafting custom applications to building dynamic, database-driven websites, I know my way around PHP like the back of my hand. Whether it’s coding complex backend logic, integrating APIs, or optimizing performance for high-traffic sites, I deliver clean, secure, and efficient code that gets the job done. My knack for problem-solving means I can tackle any challenge and make your project shine.</p>
-                            <div class="tags">
+                            <div class="tags" data-i18n-list="services.php.tags">
                                 <a href="#0">Pure PHP</a>
                                 <a href="#0">Laravel</a>
                                 <a href="#0">CodeIgniter</a>
@@ -509,10 +324,10 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="item sm-mb30">
-                            <h3 class="letr">S</h3>
+                            <h3 class="letr" aria-hidden="true">S</h3>
                             <h6 data-i18n="services.seo.title">SEO</h6>
                             <p data-i18n="services.seo.desc">I’m an SEO rockstar who knows how to skyrocket websites to the top of search results. From nailing on-page optimization to crafting killer content strategies, I’ve got the skills to boost rankings and drive organic traffic like nobody’s business. I dive deep into keyword research, technical SEO, and link-building to make sure sites perform at their peak. My data-driven approach means I can fine-tune every detail to get your website seen and keep it ahead of the game.</p>
-                            <div class="tags">
+                            <div class="tags" data-i18n-list="services.seo.tags">
                                 <a href="#0">Technical SEO</a>
                                 <a href="#0">Link Building</a>
                                 <a href="#0">On-Page SEO</a>
@@ -532,44 +347,38 @@
             </div>
         </section>
         <!-- ==================== End Services ==================== -->
-        <!-- ==================== Start Products ==================== -->
-        <section class="portfolio section-padding pt-0" data-scroll-index="3" id="products">
+        <!-- ==================== Start Services I Own ==================== -->
+        <section class="own section-padding pt-0" data-scroll-index="3" id="services">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="sec-head bord-thin-bottom pb-20 mb-30">
-                            <h4 class="sub-title fz-28" data-i18n="projects.owned.title">Products I Own</h4>
+                            <h4 class="sub-title fz-28" data-i18n="own.title">Services I Own</h4>
                         </div>
-                    </div>
-                </div>
-                <div class="row" data-projects="owned">
-                    <div class="col-12">
-                        <p class="text-center" data-i18n="state.loading">Loading…</p>
+                        <ul class="data-list" data-list="own">
+                            <li class="data-state" data-i18n="state.loading">Loading…</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ==================== End Products ==================== -->
+        <!-- ==================== End Services I Own ==================== -->
         <!-- ==================== Start Open Source ==================== -->
-        <section class="portfolio section-padding" data-scroll-index="4" id="open-source">
+        <section class="own section-padding" data-scroll-index="4" id="open-source">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="sec-head bord-thin-bottom pb-20 mb-30">
-                            <h4 class="sub-title fz-28" data-i18n="projects.oss.title">Open Source</h4>
+                            <h4 class="sub-title fz-28" data-i18n="repos.title">Open Source</h4>
                         </div>
-                    </div>
-                </div>
-                <div class="row" data-projects="oss">
-                    <div class="col-12">
-                        <p class="text-center" data-i18n="state.loading">Loading…</p>
-                    </div>
-                </div>
-                <div class="row mt-30">
-                    <div class="col-12 text-center">
-                        <a class="butn butn-md butn-bord radius-5 skew" href="https://github.com/pedramgholizadeh" target="_blank" rel="noopener">
-                            <span data-i18n="projects.oss.all">All repositories on GitHub</span>
-                        </a>
+                        <ul class="data-list" data-list="repos">
+                            <li class="data-state" data-i18n="state.loading">Loading…</li>
+                        </ul>
+                        <div class="text-center mt-30">
+                            <a class="butn butn-md butn-bord radius-5 skew" href="https://github.com/pedramgholizadeh" target="_blank" rel="noopener">
+                                <span data-i18n="repos.all">All repositories on GitHub</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -590,22 +399,22 @@
                             </div>
                             <ul class="rest social-text d-flex mt-60">
                                 <li class="mr-30">
-                                    <a href="https://t.me/pedramgholizadeh" class="hover-this"><span class="hover-anim">Telegram</span></a>
+                                    <a href="https://t.me/pedramgholizadeh" class="hover-this"><span class="hover-anim" data-i18n="contact.social.telegram">Telegram</span></a>
                                 </li>
                                 <li class="mr-30">
-                                    <a href="https://www.instagram.com/pedramgholizadeh" class="hover-this"><span class="hover-anim">Instagram</span></a>
+                                    <a href="https://www.instagram.com/pedramgholizadeh" class="hover-this"><span class="hover-anim" data-i18n="contact.social.instagram">Instagram</span></a>
                                 </li>
                                 <li class="mr-30">
-                                    <a href="https://x.com/PedramGholizade" class="hover-this"><span class="hover-anim">Twitter</span></a>
+                                    <a href="https://x.com/PedramGholizade" class="hover-this"><span class="hover-anim" data-i18n="contact.social.twitter">Twitter</span></a>
                                 </li>
                                 <li class="mr-30">
-                                    <a href="https://www.linkedin.com/in/pedramgholizadeh" class="hover-this"><span class="hover-anim">LinkedIn</span></a>
+                                    <a href="https://www.linkedin.com/in/pedramgholizadeh" class="hover-this"><span class="hover-anim" data-i18n="contact.social.linkedin">LinkedIn</span></a>
                                 </li>
                                 <li class="mr-30">
-                                    <a href="https://github.com/pedramgholizadeh" class="hover-this"><span class="hover-anim">Github</span></a>
+                                    <a href="https://github.com/pedramgholizadeh" class="hover-this"><span class="hover-anim" data-i18n="contact.social.github">Github</span></a>
                                 </li>
                                 <li>
-                                    <a href="https://www.youtube.com/@pedramgholizadeh" class="hover-this"><span class="hover-anim">YouTube</span></a>
+                                    <a href="https://www.youtube.com/@pedramgholizadeh" class="hover-this"><span class="hover-anim" data-i18n="contact.social.youtube">YouTube</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -636,7 +445,7 @@
     <!-- custom scripts -->
     <script src="assets/js/scripts.js" defer></script>
     <script src="assets/js/i18n.js" defer></script>
-    <script src="assets/js/projects.js" defer></script>
+    <script src="assets/js/lists.js" defer></script>
     <script src="assets/js/sw-register.js" defer></script>
     <script src="assets/js/wave.js" defer></script>
 </body>

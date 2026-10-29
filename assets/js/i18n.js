@@ -7,6 +7,7 @@
   const STORAGE_KEY = 'site.lang';
   const LANG_EVENT = 'site:lang';
   const dictionaries = new Map();
+  let current = {};
 
   function loadDictionary(lang) {
     if (!dictionaries.has(lang)) {
@@ -21,9 +22,26 @@
     return dictionaries.get(lang);
   }
 
-  // scripts.js rebuilds every .rolling-text into per-letter spans, so a
-  // translated label has to rebuild the same structure to keep its animation.
+  function letters(text, className) {
+    var fragment = document.createDocumentFragment();
+    for (var i = 0; i < text.length; i++) {
+      var letter = document.createElement('span');
+      if (className) letter.className = className;
+      letter.textContent = text[i].trim() === '' ? '\u00a0' : text[i];
+      fragment.appendChild(letter);
+    }
+    return fragment;
+  }
+
+  // scripts.js rebuilds every .rolling-text into per-letter spans and the
+  // preloader splits its word the same way, so a translated label has to
+  // rebuild the same structure to keep the animation working.
   function setText(element, text) {
+    if (element.classList.contains('load-text')) {
+      element.innerHTML = '';
+      element.appendChild(letters(text, null));
+      return;
+    }
     if (!element.classList.contains('rolling-text')) {
       element.textContent = text;
       return;
@@ -31,17 +49,14 @@
     element.innerHTML = '';
     var block = document.createElement('div');
     block.className = 'block';
-    for (var i = 0; i < text.length; i++) {
-      var letter = document.createElement('span');
-      letter.className = 'letter';
-      letter.textContent = text[i].trim() === '' ? '\u00a0' : text[i];
-      block.appendChild(letter);
-    }
+    block.appendChild(letters(text, 'letter'));
     element.appendChild(block);
     element.appendChild(block.cloneNode(true));
   }
 
   function applyDictionary(dictionary) {
+    current = dictionary;
+
     // data-i18n-html is only ever fed by this site's own dictionary files, which
     // is what lets copy like the about paragraph keep its <b> emphasis.
     document.querySelectorAll('[data-i18n]').forEach(function (node) {
@@ -51,6 +66,23 @@
     document.querySelectorAll('[data-i18n-html]').forEach(function (node) {
       var html = dictionary[node.dataset.i18nHtml];
       if (typeof html === 'string') node.innerHTML = html;
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (node) {
+      var label = dictionary[node.dataset.i18nAria];
+      if (typeof label === 'string') node.setAttribute('aria-label', label);
+    });
+    // Skill tags are a list, so they are rebuilt from the dictionary instead of
+    // carrying one key per tag.
+    document.querySelectorAll('[data-i18n-list]').forEach(function (node) {
+      var items = dictionary[node.dataset.i18nList];
+      if (!Array.isArray(items)) return;
+      node.innerHTML = '';
+      items.forEach(function (item) {
+        var tag = document.createElement('a');
+        tag.href = '#0';
+        tag.textContent = item;
+        node.appendChild(tag);
+      });
     });
 
     if (dictionary['meta.title']) document.title = dictionary['meta.title'];
@@ -92,6 +124,11 @@
       return document.documentElement.lang || FALLBACK;
     },
     set: setLang,
+    // Rendered-from-JavaScript copy asks the dictionary for a string directly
+    // and keeps an English fallback for the moment before it has loaded.
+    t: function (key, fallback) {
+      return typeof current[key] === 'string' ? current[key] : fallback;
+    },
     refresh: function () {
       return loadDictionary(window.siteLang.get()).then(applyDictionary);
     },

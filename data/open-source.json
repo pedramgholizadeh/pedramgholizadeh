@@ -5,6 +5,8 @@
       "name": "PersianNationalCodeGenerator",
       "url": "https://github.com/pedramgholizadeh/PersianNationalCodeGenerator",
       "description": "check persian nationalcode / generate fake nationalcode !",
+      "descriptionFa": "اعتبارسنجی کد ملی ایران و ساخت کد ملی نمونه.",
+      "descriptionAr": "التحقق من الرقم الوطني الإيراني وإنشاء أرقام تجريبية.",
       "language": "HTML",
       "stars": 14,
       "updated": "2023-07-01"
@@ -13,6 +15,8 @@
       "name": "ToshiMoshi-Bot",
       "url": "https://github.com/pedramgholizadeh/ToshiMoshi-Bot",
       "description": "a simple telegram bot , like notcoin , collect score with tap!",
+      "descriptionFa": "ربات سادهٔ تلگرامی شبیه نات‌کوین؛ جمع‌کردن امتیاز با ضربه.",
+      "descriptionAr": "بوت تلغرام بسيط على غرار Notcoin، تجمع النقاط بالضغط.",
       "language": "PHP",
       "stars": 7,
       "updated": "2024-07-07"
@@ -21,6 +25,8 @@
       "name": "chat-deepseek-rtl-fixer-chrome",
       "url": "https://github.com/pedramgholizadeh/chat-deepseek-rtl-fixer-chrome",
       "description": "Chrome Extentions: RTL Fixer!",
+      "descriptionFa": "افزونهٔ کروم برای اصلاح چیدمان راست‌به‌چپ.",
+      "descriptionAr": "إضافة كروم لإصلاح العرض من اليمين إلى اليسار.",
       "language": "JavaScript",
       "stars": 1,
       "updated": "2025-01-27"
@@ -28,7 +34,9 @@
     {
       "name": "WordPress-AutoLogin-Service",
       "url": "https://github.com/pedramgholizadeh/WordPress-AutoLogin-Service",
-      "description": null,
+      "description": "Entry point that logs a user in automatically.",
+      "descriptionFa": "سرویس ورود خودکار کاربران در وردپرس.",
+      "descriptionAr": "خدمة تسجيل الدخول التلقائي للمستخدمين في ووردبريس.",
       "language": "PHP",
       "stars": 1,
       "updated": "2024-06-12"
@@ -37,6 +45,8 @@
       "name": "curated-skills",
       "url": "https://github.com/pedramgholizadeh/curated-skills",
       "description": "A curated collection of AI agent skills, tools, and workflows I personally use and recommend. Open source, practical, and continuously evolving.",
+      "descriptionFa": "مجموعه‌ای منتخب از مهارت‌ها، ابزارها و گردش‌کارهای عامل‌های هوش مصنوعی.",
+      "descriptionAr": "مجموعة منسّقة من مهارات وأدوات ومسير عمل وكلاء الذكاء الاصطناعي.",
       "language": "JavaScript",
       "stars": 0,
       "updated": "2026-10-29"
@@ -44,7 +54,9 @@
     {
       "name": "himym-rewatch",
       "url": "https://github.com/pedramgholizadeh/himym-rewatch",
-      "description": null,
+      "description": "Episode guide for rewatching How I Met Your Mother.",
+      "descriptionFa": "راهنمای اپیزودها برای تماشای دوبارهٔ چطور مامانت رو آشنا شدم.",
+      "descriptionAr": "دليل حلقات لإعادة مشاهدة How I Met Your Mother.",
       "language": "HTML",
       "stars": 0,
       "updated": "2026-10-28"
@@ -53,6 +65,8 @@
       "name": "PayViro",
       "url": "https://github.com/pedramgholizadeh/PayViro",
       "description": "GateWay Service for Payments",
+      "descriptionFa": "سرویس درگاه پرداخت.",
+      "descriptionAr": "خدمة بوابة للدفع الإلكتروني.",
       "language": "PHP",
       "stars": 0,
       "updated": "2026-10-27"
@@ -60,7 +74,9 @@
     {
       "name": "shabdiz-app",
       "url": "https://github.com/pedramgholizadeh/shabdiz-app",
-      "description": null,
+      "description": "Flutter application for the Shabdiz service.",
+      "descriptionFa": "اپلیکیشن فلاتر برای سرویس شبدیز.",
+      "descriptionAr": "تطبيق Flutter لخدمة Shabdiz.",
       "language": "Dart",
       "stars": 0,
       "updated": "2026-10-26"
@@ -68,7 +84,9 @@
     {
       "name": "hamkar-chrome",
       "url": "https://github.com/pedramgholizadeh/hamkar-chrome",
-      "description": null,
+      "description": "Chrome extension: Hamkar assistant.",
+      "descriptionFa": "افزونهٔ کروم دستیار همکار.",
+      "descriptionAr": "إضافة كروم: مساعد Hamkar.",
       "language": "JavaScript",
       "stars": 0,
       "updated": "2026-10-25"
@@ -76,7 +94,9 @@
     {
       "name": "webiro-laravel",
       "url": "https://github.com/pedramgholizadeh/webiro-laravel",
-      "description": null,
+      "description": "Webiro services built on Laravel.",
+      "descriptionFa": "سرویس‌های وبیرو ساخته‌شده با لاراول.",
+      "descriptionAr": "خدمات WEBIRO مبنية على لارافل.",
       "language": "PHP",
       "stars": 0,
       "updated": "2026-08-14"
@@ -84,7 +104,9 @@
     {
       "name": "diet-ai-platform",
       "url": "https://github.com/pedramgholizadeh/diet-ai-platform",
-      "description": null,
+      "description": "AI-assisted diet planning platform.",
+      "descriptionFa": "پلتفرم برنامهٔ غذایی با کمک هوش مصنوعی.",
+      "descriptionAr": "منصة تخطيط الحمية بمساعدة الذكاء الاصطناعي.",
       "language": "HTML",
       "stars": 0,
       "updated": "2026-07-20"
@@ -92,7 +114,9 @@
     {
       "name": "webnova-ai-made",
       "url": "https://github.com/pedramgholizadeh/webnova-ai-made",
-      "description": null,
+      "description": "AI-generated website built with Astro.",
+      "descriptionFa": "وب‌سایت تولید‌شده با هوش مصنوعی روی Astro.",
+      "descriptionAr": "موقع مولّد بالذكاء الاصطناعي باستخدام Astro.",
       "language": "Astro",
       "stars": 0,
       "updated": "2026-07-16"

@@ -1,4 +1,4 @@
-/* Project data sections, language switcher and right-to-left support. */
+/* Language switcher, experience and data lists, right-to-left support. */
 
 /* ---------- language switcher ---------- */
 .lang-switch {
@@ -36,42 +36,193 @@
   }
 }
 
-/* ---------- project cards ---------- */
-.portfolio .item .cont .projects-summary {
-  margin: 8px 0 0;
-  max-width: 32ch;
-  opacity: 0.7;
+/* Six nav labels, a logo and three language buttons do not fit side by side in
+   the 960px container, so the desktop bar tightens below the xl breakpoint. */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar .navbar-nav .nav-link {
+    margin: 0 6px;
+    padding: 20px 6px 15px;
+  }
+
+  .lang-switch {
+    margin-left: 8px;
+  }
+
+  .lang-btn {
+    padding: 5px 8px;
+  }
 }
 
-.portfolio .item .cont .projects-stars {
-  margin: 6px 0 0;
+/* ---------- skip link ---------- */
+.skip-link {
+  position: absolute;
+  inset-inline-start: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 10px 18px;
+  background: var(--maincolor);
+  color: #1d1d1d;
+  font-size: 13px;
+}
+
+.skip-link:focus {
+  inset-inline-start: 8px;
+  top: 8px;
+}
+
+/* ---------- work experience ---------- */
+.exp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content max-content;
+  align-items: center;
+  gap: 6px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.exp-date {
+  padding: 4px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
   font-size: 12px;
+  white-space: nowrap;
+  opacity: 0.75;
+}
+
+.exp-role {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.exp-org {
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.exp-link svg {
+  width: 22px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  opacity: 0.45;
+  transition: all 0.4s;
+}
+
+.exp-item:hover .exp-link svg {
+  opacity: 1;
+  stroke: var(--maincolor);
+}
+
+@media screen and (max-width: 767px) {
+  .exp-item {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    gap: 6px 12px;
+  }
+
+  .exp-role { grid-row: 1; grid-column: 1; }
+  .exp-link { grid-row: 1; grid-column: 2; }
+  .exp-org { grid-row: 2; grid-column: 1; }
+  .exp-date { grid-row: 2; grid-column: 2; justify-self: end; }
+}
+
+/* ---------- JSON-driven lists (owned services, repositories) ---------- */
+.data-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.data-row {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr) max-content;
+  align-items: baseline;
+  gap: 4px 24px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.data-row__title {
+  color: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.data-row__title:hover {
+  color: var(--maincolor);
+}
+
+.data-row__desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+.data-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.data-row__lang {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-inline-end: 6px;
+  border-radius: 50%;
+}
+
+.data-row__stars {
+  display: inline-flex;
+  align-items: center;
+}
+
+.data-row .icon-star {
+  width: 12px;
+  height: 12px;
+  margin-inline-end: 5px;
+  fill: var(--maincolor);
+}
+
+.data-state {
+  padding: 24px 0;
+  font-size: 14px;
+  text-align: center;
   opacity: 0.6;
 }
 
-.projects-stars .icon-star {
-  width: 12px;
-  height: 12px;
-  fill: var(--maincolor);
-  vertical-align: -2px;
-  margin-right: 5px;
+.data-state .butn {
+  margin-inline-start: 10px;
 }
 
-/* Projects without a logo in projects.json get a letter tile in their place. */
-.portfolio .item .img .proj-monogram {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 19 / 10;
-  font-size: 64px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 5px;
-}
+@media screen and (max-width: 767px) {
+  .data-row {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    gap: 4px 12px;
+  }
 
-.projects-state {
-  opacity: 0.7;
+  .data-row__title { grid-row: 1; grid-column: 1; }
+  .data-row__meta { grid-row: 1; grid-column: 2; }
+  .data-row__desc { grid-row: 2; grid-column: 1 / -1; }
 }
 
 /* ---------- sprite icons ---------- */
@@ -118,9 +269,4 @@
 [dir="rtl"] .lang-switch {
   margin-left: 0;
   margin-right: 20px;
-}
-
-[dir="rtl"] .projects-stars .icon-star {
-  margin-right: 0;
-  margin-left: 5px;
 }

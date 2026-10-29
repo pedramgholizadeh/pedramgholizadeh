@@ -25,9 +25,10 @@ Pedram Gholizadeh
 
 The site is plain HTML/CSS/JS served by GitHub Pages, and it loads nothing from another host — no Google Fonts, no CDNs, no analytics.
 
-- `projects.json` — the projects I own. One entry per project: `logo`, `nameEn`, `nameFa`, `domain`, `description`. Leave `logo` empty and the card shows a letter tile.
-- `i18n/en.json`, `i18n/fa.json`, `i18n/ar.json` — every string on the page; the header switcher picks one and remembers it. English is the default and the copy baked into `index.html`.
-- `node tools/refresh-data.mjs` — snapshots my GitHub repos into `data/open-source.json` (run before a push when I want fresh stars/descriptions).
+- `services.json` — the services I own, shown under "Services I Own". One entry per service: `domain`, `nameEn`, `nameFa`, `nameAr`, `descriptionEn`, `descriptionFa`, `descriptionAr`. No screenshots: the list is text only, and any language without its own field falls back to English.
+- `i18n/en.json`, `i18n/fa.json`, `i18n/ar.json` — every string on the page, including the skill tag lists (which are arrays) and the `aria-label`s; the header switcher picks one and remembers it. English is the default and the copy baked into `index.html`.
+- `data/open-source.json` — the repository list, with `descriptionFa` / `descriptionAr` kept by name across refreshes.
+- `node tools/refresh-data.mjs` — snapshots my GitHub repos and cross-checks `services.json` against apps.webiro.ir (run before a push when I want fresh stars/descriptions).
 - `node tools/fetch-fonts.mjs` — re-vendors the webfonts into `assets/fonts/web` after changing `assets/css/fonts.css` needs.
 - `sw.js` — caches what a visitor downloads; code and JSON revalidate in the background, images and fonts come from cache. Bump `CACHE` there when a rename must land immediately.
 - `linkinbio/` shares `assets/` with the main page, so deleting a shared file there breaks both.

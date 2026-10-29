@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-10-29",
+  "source": "https://apps.webiro.ir",
+  "services": [
+    {
+      "nameEn": "WEBIRO Creativity Agency",
+      "nameFa": "آژانس خلاقیت وبیرو",
+      "nameAr": "وكالة WEBIRO للإبداع",
+      "domain": "webiro.ir",
+      "descriptionEn": "Design, development and digital marketing studio.",
+      "descriptionFa": "استودیوی طراحی، توسعه و بازاریابی دیجیتال.",
+      "descriptionAr": "استوديو للتصميم والتطوير والتسويق الرقمي."
+    },
+    {
+      "nameEn": "Webiro Apps",
+      "nameFa": "محصولات وبیرو",
+      "nameAr": "تطبيقات WEBIRO",
+      "domain": "apps.webiro.ir",
+      "descriptionEn": "Products Webiro has built or sponsored.",
+      "descriptionFa": "محصولاتی که وبیرو ساخته یا حمایت کرده است.",
+      "descriptionAr": "المنتجات التي طورتها WEBIRO أو دعمتها."
+    },
+    {
+      "nameEn": "Dataak Corp.",
+      "nameFa": "داده‌اک",
+      "nameAr": "شركة Dataak",
+      "domain": "dataak.com",
+      "descriptionEn": "Corporate website built on WordPress.",
+      "descriptionFa": "سایت شرکتی ساخته‌شده با وردپرس.",
+      "descriptionAr": "موقع شركة مبنية على ووردبريس."
+    },
+    {
+      "nameEn": "Varzesh3 News Agency",
+      "nameFa": "ورزش سه‌جی",
+      "nameAr": "وكالة Varzesh3",
+      "domain": "varzesh3.com",
+      "descriptionEn": "Sports news platform — content and SEO.",
+      "descriptionFa": "پلتفرم خبر ورزشی — محتوا و سئو.",
+      "descriptionAr": "منصة أخبار رياضية — محتوى وتحسين محركات البحث."
+    },
+    {
+      "nameEn": "Pishbini Varzesh3",
+      "nameFa": "پیش‌بینی ورزش سه‌جی",
+      "nameAr": "تنبؤات Varzesh3",
+      "domain": "pishbini.varzesh3.com",
+      "descriptionEn": "Match-prediction game.",
+      "descriptionFa": "بازی پیش‌بینی مسابقه فوتبال.",
+      "descriptionAr": "لعبة التنبؤ بنتائج المباريات."
+    },
+    {
+      "nameEn": "30rang Art Academy",
+      "nameFa": "آکادمی سی‌رنگ",
+      "nameAr": "أكاديمية 30rang للفنون",
+      "domain": "30rang.art",
+      "descriptionEn": "Art academy website on WordPress.",
+      "descriptionFa": "سایت آکادمی هنر روی وردپرس.",
+      "descriptionAr": "موقع أكاديمية فنية على ووردبريس."
+    },
+    {
+      "nameEn": "Majid Azadbakht Platform",
+      "nameFa": "پلتفرم مجید آزادبخت",
+      "nameAr": "منصة Majid Azadbakht",
+      "domain": "majidazadbakht.com",
+      "descriptionEn": "Personal brand platform on WordPress.",
+      "descriptionFa": "پلتفرم برند شخصی روی وردپرس.",
+      "descriptionAr": "منصة علامة شخصية على ووردبريس."
+    },
+    {
+      "nameEn": "Elegance Coffee Academy",
+      "nameFa": "آکادمی قهوه الگنس",
+      "nameAr": "أكاديمية Elegance للقهوة",
+      "domain": "elegancecoffee.academy",
+      "descriptionEn": "Coffee education academy on WordPress.",
+      "descriptionFa": "آکادمی آموزش قهوه روی وردپرس.",
+      "descriptionAr": "أكاديمية تعليم القهوة على ووردبريس."
+    },
+    {
+      "nameEn": "Keshmoon",
+      "nameFa": "کشمون",
+      "nameAr": "Keshmoon",
+      "domain": "keshmoon.com",
+      "descriptionEn": "Custom website development project.",
+      "descriptionFa": "پروژه توسعه وب‌سایت سفارشی.",
+      "descriptionAr": "مشروع تطوير موقع مخصص."
+    },
+    {
+      "nameEn": "Buskool",
+      "nameFa": "باسکول",
+      "nameAr": "Buskool",
+      "domain": "buskool.com",
+      "descriptionEn": "Custom website development project.",
+      "descriptionFa": "پروژه توسعه وب‌سایت سفارشی.",
+      "descriptionAr": "مشروع تطوير موقع مخصص."
+    },
+    {
+      "nameEn": "HIGLC English Academy",
+      "nameFa": "آکادمی زبان هاگلک",
+      "nameAr": "أكاديمية HIGLC للغة الإنجليزية",
+      "domain": "higlc.ir",
+      "descriptionEn": "Language academy on WordPress.",
+      "descriptionFa": "آکادمی زبان روی وردپرس.",
+      "descriptionAr": "أكاديمية لغات على ووردبريس."
+    },
+    {
+      "nameEn": "Rabinhome",
+      "nameFa": "ربین‌هوم",
+      "nameAr": "Rabinhome",
+      "domain": "rabinhome.com",
+      "descriptionEn": "Home and furniture brand on WordPress.",
+      "descriptionFa": "برند خانه و مبلمان روی وردپرس.",
+      "descriptionAr": "علامة أثاث ومنزل على ووردبريس."
+    },
+    {
+      "nameEn": "Mahestan Group",
+      "nameFa": "گروه مهستان",
+      "nameAr": "مجموعة Mahestan",
+      "domain": "mahestan-group.com",
+      "descriptionEn": "Corporate website on WordPress.",
+      "descriptionFa": "سایت شرکتی روی وردپرس.",
+      "descriptionAr": "موقع شركة على ووردبريس."
+    },
+    {
+      "nameEn": "Mehregan Sabt Corp.",
+      "nameFa": "مهرگان ثبت",
+      "nameAr": "شركة Mehregan Sabt",
+      "domain": "mehregansabt.com",
+      "descriptionEn": "Company-registration services on WordPress.",
+      "descriptionFa": "خدمات ثبت شرکت روی وردپرس.",
+      "descriptionAr": "خدمات تسجيل الشركات على ووردبريس."
+    },
+    {
+      "nameEn": "Gym Center Club",
+      "nameFa": "باشگاه جیم سنتر",
+      "nameAr": "نادي Gym Center",
+      "domain": "gymcenter.ir",
+      "descriptionEn": "Sports club website on WordPress.",
+      "descriptionFa": "سایت باشگاه ورزشی روی وردپرس.",
+      "descriptionAr": "موقع نادٍ رياضي على ووردبريس."
+    }
+  ]
+}
