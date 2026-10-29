@@ -35,9 +35,26 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Code and data are revalidated in the background, so an edit is live on the
+  // Translations and lists are tiny JSON and a stale copy is a visible bug — the
+  // page renders in the wrong language — so they always go to the network first.
+  if (/\.json$/.test(url.pathname)) {
+    event.respondWith((async () => {
+      try {
+        // 'reload' also skips the browser's own heuristic cache, which would
+        // otherwise keep an old dictionary for several visits.
+        const response = await fetch(request, { cache: 'reload' });
+        store(request, response);
+        return response;
+      } catch (offline) {
+        return (await caches.match(request)) || Response.error();
+      }
+    })());
+    return;
+  }
+
+  // Code and styles are revalidated in the background, so an edit is live on the
   // second visit without waiting for a cache version bump.
-  if (/\.(json|css|js)$/.test(url.pathname)) {
+  if (/\.(css|js)$/.test(url.pathname)) {
     event.respondWith(staleWhileRevalidate(request));
     return;
   }
