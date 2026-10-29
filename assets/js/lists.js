@@ -59,11 +59,14 @@
   }
 
   function ownRow(service, lang) {
+    // The meta line shows the address without its scheme, because several
+    // services live under a path of apps.webiro.ir rather than on their own domain.
+    const address = service.url.replace(/^https?:\/\//, '');
     return row(
       localized(service, 'name', lang),
-      'https://' + service.domain,
+      service.url,
       localized(service, 'description', lang),
-      '<span class="data-row__domain">' + escape(service.domain) + '</span>'
+      '<span class="data-row__domain">' + escape(address) + '</span>'
     );
   }
 

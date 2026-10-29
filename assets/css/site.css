@@ -183,6 +183,17 @@
   align-items: center;
 }
 
+/* Several services live under a path of apps.webiro.ir, so the address is longer
+   than a domain: keep it reading left-to-right inside a right-to-left page and
+   clip it instead of widening the row. */
+.data-row__domain {
+  direction: ltr;
+  unicode-bidi: isolate;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .lang-dot {
   display: inline-block;
   width: 9px;

@@ -3,12 +3,12 @@
 //
 //   node tools/refresh-data.mjs            # both sources
 //   node tools/refresh-data.mjs --repos    # only data/open-source.json
-//   node tools/refresh-data.mjs --services # only services.json
+//   node tools/refresh-data.mjs --services # only check services.json
 //
 // The site never calls an external API at runtime; it reads the files this
 // script writes, so re-running it and committing the output is the only way
-// data changes. Translations that live only in these files (Persian/Arabic
-// names and descriptions) are carried over by name on every run.
+// the repository list changes. services.json is different: it is the list of
+// services I own, written by hand, and this script only checks it.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
 const GITHUB_USER = 'pedramgholizadeh';
@@ -68,47 +68,42 @@ async function refreshRepos() {
   }
 }
 
-async function refreshServices() {
-  const previous = (await readJson('services.json', { services: [] })).services;
-  const byDomain = new Map(previous.map((service) => [service.domain, service]));
+// services.json is my own list, edited by hand, so this never rewrites it. It
+// only reports entries that apps.webiro.ir no longer links to.
+async function checkServices() {
+  const services = (await readJson('services.json', { services: [] })).services;
 
-  // apps.webiro.ir renders its grid with a script, so the list is read from the
-  // page's JSON endpoint when it answers and from the anchors when it does not.
-  let remote = [];
+  let html = '';
   try {
     const page = await fetch(APPS_URL, { headers: { 'User-Agent': 'pedramgholizadeh-site' } });
     if (!page.ok) throw new Error(`${APPS_URL} responded ${page.status}`);
-    const html = await page.text();
-    for (const match of html.matchAll(/https?:\/\/((?!apps\.)[a-z0-9.-]+\.[a-z]{2,})/gi)) {
-      const domain = match[1].toLowerCase().replace(/^www\./, '');
-      if (!remote.some((item) => item.domain === domain)) remote.push({ domain });
-    }
+    html = await page.text();
   } catch (error) {
-    console.warn(`Could not read ${APPS_URL}: ${error.message}`);
-  }
-
-  const services = remote
-    .map((item) => byDomain.get(item.domain))
-    .filter(Boolean);
-
-  if (!services.length) {
-    console.warn('No apps.webiro.ir service matched services.json, so it was left untouched.');
-    console.warn('Edit services.json by hand to add or change an owned service.');
+    console.warn(`Could not read ${APPS_URL}: ${error.message} — nothing was checked.`);
     return;
   }
 
-  await writeFile('services.json', JSON.stringify({
-    generatedAt: new Date().toISOString().slice(0, 10),
-    source: APPS_URL,
-    services,
-  }, null, 2) + '\n');
-  console.log(`services.json kept ${services.length} services found on apps.webiro.ir.`);
+  const address = (service) => {
+    const url = new URL(service.url);
+    return (url.host + url.pathname).replace(/^www\./, '').replace(/\/$/, '');
+  };
 
-  const dropped = previous.filter((service) => !services.includes(service));
-  if (dropped.length) {
-    console.log(`Not linked from apps.webiro.ir anymore (kept in git history): ${dropped.map((s) => s.domain).join(', ')}`);
+  console.log(`services.json lists ${services.length} services and was left untouched.`);
+
+  // The grid is rendered by a script, so a page with no cards in its HTML says
+  // nothing about the list; only a server-rendered page can be compared against it.
+  if (!html.includes('<article class="card')) {
+    console.warn(`${APPS_URL} served no service cards, so nothing could be verified.`);
+    return;
+  }
+
+  const missing = services.filter((service) => !html.includes(address(service)));
+  if (missing.length) {
+    console.log(`Not linked from apps.webiro.ir anymore: ${missing.map(address).join(', ')}`);
+  } else {
+    console.log('Every service in services.json is still linked from apps.webiro.ir.');
   }
 }
 
 if (only.includes('--repos')) await refreshRepos();
-if (only.includes('--services')) await refreshServices();
+if (only.includes('--services')) await checkServices();

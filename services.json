@@ -1,141 +1,123 @@
 {
   "generatedAt": "2026-10-29",
-  "source": "https://apps.webiro.ir",
+  "source": "Edited by hand. One entry per service I own: its url, its name in three languages, and a one-line description in three languages.",
   "services": [
     {
       "nameEn": "WEBIRO Creativity Agency",
       "nameFa": "آژانس خلاقیت وبیرو",
       "nameAr": "وكالة WEBIRO للإبداع",
-      "domain": "webiro.ir",
+      "url": "https://webiro.ir",
       "descriptionEn": "Design, development and digital marketing studio.",
       "descriptionFa": "استودیوی طراحی، توسعه و بازاریابی دیجیتال.",
       "descriptionAr": "استوديو للتصميم والتطوير والتسويق الرقمي."
     },
     {
-      "nameEn": "Webiro Apps",
-      "nameFa": "محصولات وبیرو",
-      "nameAr": "تطبيقات WEBIRO",
-      "domain": "apps.webiro.ir",
-      "descriptionEn": "Products Webiro has built or sponsored.",
-      "descriptionFa": "محصولاتی که وبیرو ساخته یا حمایت کرده است.",
-      "descriptionAr": "المنتجات التي طورتها WEBIRO أو دعمتها."
+      "nameEn": "Lahze!",
+      "nameFa": "لحظه!",
+      "nameAr": "لحظة!",
+      "url": "https://lahze-app.ir",
+      "descriptionEn": "A platform for saving your sweetest memories.",
+      "descriptionFa": "پلتفرم ثبت خاطرات شیرین شما",
+      "descriptionAr": "منصة لحفظ أجمل ذكرياتك."
     },
     {
-      "nameEn": "Dataak Corp.",
-      "nameFa": "داده‌اک",
-      "nameAr": "شركة Dataak",
-      "domain": "dataak.com",
-      "descriptionEn": "Corporate website built on WordPress.",
-      "descriptionFa": "سایت شرکتی ساخته‌شده با وردپرس.",
-      "descriptionAr": "موقع شركة مبنية على ووردبريس."
+      "nameEn": "WebiroX",
+      "nameFa": "وبیرو اکسترا",
+      "nameAr": "WebiroX",
+      "url": "https://webirox.ir",
+      "descriptionEn": "Smart assistant for your business.",
+      "descriptionFa": "دستیار هوشمند کسب‌وکار",
+      "descriptionAr": "مساعد ذكي لأعمالك."
     },
     {
-      "nameEn": "Varzesh3 News Agency",
-      "nameFa": "ورزش سه‌جی",
-      "nameAr": "وكالة Varzesh3",
-      "domain": "varzesh3.com",
-      "descriptionEn": "Sports news platform — content and SEO.",
-      "descriptionFa": "پلتفرم خبر ورزشی — محتوا و سئو.",
-      "descriptionAr": "منصة أخبار رياضية — محتوى وتحسين محركات البحث."
+      "nameEn": "Hamkar",
+      "nameFa": "همکار",
+      "nameAr": "هامكار",
+      "url": "https://apps.webiro.ir/hamkar",
+      "descriptionEn": "Chrome extension for managing teams, projects and chat.",
+      "descriptionFa": "اکستنشن کروم مدیریت تیم، پروژه و چت",
+      "descriptionAr": "إضافة كروم لإدارة الفرق والمشاريع والمحادثة."
     },
     {
-      "nameEn": "Pishbini Varzesh3",
-      "nameFa": "پیش‌بینی ورزش سه‌جی",
-      "nameAr": "تنبؤات Varzesh3",
-      "domain": "pishbini.varzesh3.com",
-      "descriptionEn": "Match-prediction game.",
-      "descriptionFa": "بازی پیش‌بینی مسابقه فوتبال.",
-      "descriptionAr": "لعبة التنبؤ بنتائج المباريات."
+      "nameEn": "ShabDiz",
+      "nameFa": "شب‌دیز",
+      "nameAr": "شبدیز",
+      "url": "https://apps.webiro.ir/shabdiz",
+      "descriptionEn": "Online film and series streaming platform.",
+      "descriptionFa": "پلتفرم پخش فیلم، سریال و سینمای آنلاین",
+      "descriptionAr": "منصة بث الأفلام والمسلسلات أونلاين."
     },
     {
-      "nameEn": "30rang Art Academy",
-      "nameFa": "آکادمی سی‌رنگ",
-      "nameAr": "أكاديمية 30rang للفنون",
-      "domain": "30rang.art",
-      "descriptionEn": "Art academy website on WordPress.",
-      "descriptionFa": "سایت آکادمی هنر روی وردپرس.",
-      "descriptionAr": "موقع أكاديمية فنية على ووردبريس."
+      "nameEn": "JARVIS",
+      "nameFa": "جارویس",
+      "nameAr": "جارویس",
+      "url": "https://apps.webiro.ir/jarvis",
+      "descriptionEn": "Voice-based artificial intelligence assistant.",
+      "descriptionFa": "دستیار هوش مصنوعی صوتی",
+      "descriptionAr": "مساعد صوتي بالذكاء الاصطناعي."
     },
     {
-      "nameEn": "Majid Azadbakht Platform",
-      "nameFa": "پلتفرم مجید آزادبخت",
-      "nameAr": "منصة Majid Azadbakht",
-      "domain": "majidazadbakht.com",
-      "descriptionEn": "Personal brand platform on WordPress.",
-      "descriptionFa": "پلتفرم برند شخصی روی وردپرس.",
-      "descriptionAr": "منصة علامة شخصية على ووردبريس."
+      "nameEn": "Tisa",
+      "nameFa": "تیسا",
+      "nameAr": "تيسا",
+      "url": "https://apps.webiro.ir/tisa",
+      "descriptionEn": "Diet and nutrition platform.",
+      "descriptionFa": "پلتفرم رژیم غذایی و تغذیه",
+      "descriptionAr": "منصة الحمية والتغذية."
     },
     {
-      "nameEn": "Elegance Coffee Academy",
-      "nameFa": "آکادمی قهوه الگنس",
-      "nameAr": "أكاديمية Elegance للقهوة",
-      "domain": "elegancecoffee.academy",
-      "descriptionEn": "Coffee education academy on WordPress.",
-      "descriptionFa": "آکادمی آموزش قهوه روی وردپرس.",
-      "descriptionAr": "أكاديمية تعليم القهوة على ووردبريس."
+      "nameEn": "Mizban",
+      "nameFa": "میزبان",
+      "nameAr": "میزبان",
+      "url": "https://apps.webiro.ir/mizban",
+      "descriptionEn": "Café, restaurant and reservation management platform.",
+      "descriptionFa": "پلتفرم مدیریت کافه، رستوران و رزرواسیون",
+      "descriptionAr": "منصة إدارة المقاهي والمطاعم والحجوزات."
     },
     {
-      "nameEn": "Keshmoon",
-      "nameFa": "کشمون",
-      "nameAr": "Keshmoon",
-      "domain": "keshmoon.com",
-      "descriptionEn": "Custom website development project.",
-      "descriptionFa": "پروژه توسعه وب‌سایت سفارشی.",
-      "descriptionAr": "مشروع تطوير موقع مخصص."
+      "nameEn": "Tabib",
+      "nameFa": "طبیب",
+      "nameAr": "طبيب",
+      "url": "https://apps.webiro.ir/tabib",
+      "descriptionEn": "Dedicated platform for doctors and specialists.",
+      "descriptionFa": "پلتفرم اختصاصی پزشکان و متخصصان",
+      "descriptionAr": "منصة مخصصة للأطباء والمتخصصين."
     },
     {
-      "nameEn": "Buskool",
-      "nameFa": "باسکول",
-      "nameAr": "Buskool",
-      "domain": "buskool.com",
-      "descriptionEn": "Custom website development project.",
-      "descriptionFa": "پروژه توسعه وب‌سایت سفارشی.",
-      "descriptionAr": "مشروع تطوير موقع مخصص."
+      "nameEn": "VarizUp",
+      "nameFa": "واریزآپ",
+      "nameAr": "VarizUp",
+      "url": "https://varizup.ir",
+      "descriptionEn": "Smart card-to-card transfer platform.",
+      "descriptionFa": "پلتفرم واریز کارت به کارت هوشمند",
+      "descriptionAr": "منصة تحويل ذكي من بطاقة إلى بطاقة."
     },
     {
-      "nameEn": "HIGLC English Academy",
-      "nameFa": "آکادمی زبان هاگلک",
-      "nameAr": "أكاديمية HIGLC للغة الإنجليزية",
-      "domain": "higlc.ir",
-      "descriptionEn": "Language academy on WordPress.",
-      "descriptionFa": "آکادمی زبان روی وردپرس.",
-      "descriptionAr": "أكاديمية لغات على ووردبريس."
+      "nameEn": "Nava Podcast",
+      "nameFa": "نوا",
+      "nameAr": "نوا",
+      "url": "https://apps.webiro.ir/nava",
+      "descriptionEn": "Publish and listen to Persian podcasts.",
+      "descriptionFa": "پلتفرم انتشار و شنیدن پادکست فارسی",
+      "descriptionAr": "نشر البودكاست الفارسي والاستماع إليه."
     },
     {
-      "nameEn": "Rabinhome",
-      "nameFa": "ربین‌هوم",
-      "nameAr": "Rabinhome",
-      "domain": "rabinhome.com",
-      "descriptionEn": "Home and furniture brand on WordPress.",
-      "descriptionFa": "برند خانه و مبلمان روی وردپرس.",
-      "descriptionAr": "علامة أثاث ومنزل على ووردبريس."
+      "nameEn": "Altabir",
+      "nameFa": "التعبیر",
+      "nameAr": "التعبير",
+      "url": "https://altabir.com",
+      "descriptionEn": "Dream interpretation service.",
+      "descriptionFa": "سرویس تعبیر خواب",
+      "descriptionAr": "خدمة تفسير الأحلام."
     },
     {
-      "nameEn": "Mahestan Group",
-      "nameFa": "گروه مهستان",
-      "nameAr": "مجموعة Mahestan",
-      "domain": "mahestan-group.com",
-      "descriptionEn": "Corporate website on WordPress.",
-      "descriptionFa": "سایت شرکتی روی وردپرس.",
-      "descriptionAr": "موقع شركة على ووردبريس."
-    },
-    {
-      "nameEn": "Mehregan Sabt Corp.",
-      "nameFa": "مهرگان ثبت",
-      "nameAr": "شركة Mehregan Sabt",
-      "domain": "mehregansabt.com",
-      "descriptionEn": "Company-registration services on WordPress.",
-      "descriptionFa": "خدمات ثبت شرکت روی وردپرس.",
-      "descriptionAr": "خدمات تسجيل الشركات على ووردبريس."
-    },
-    {
-      "nameEn": "Gym Center Club",
-      "nameFa": "باشگاه جیم سنتر",
-      "nameAr": "نادي Gym Center",
-      "domain": "gymcenter.ir",
-      "descriptionEn": "Sports club website on WordPress.",
-      "descriptionFa": "سایت باشگاه ورزشی روی وردپرس.",
-      "descriptionAr": "موقع نادٍ رياضي على ووردبريس."
+      "nameEn": "Payviro",
+      "nameFa": "پی‌ویرو",
+      "nameAr": "پی‌ویرو",
+      "url": "https://apps.webiro.ir/payviro",
+      "descriptionEn": "Payviro payment gateway.",
+      "descriptionFa": "گیت‌وی پرداخت پی‌ویرو",
+      "descriptionAr": "بوابة دفع Payviro."
     }
   ]
 }

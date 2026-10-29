@@ -25,7 +25,7 @@ Pedram Gholizadeh
 
 The site is plain HTML/CSS/JS served by GitHub Pages, and it loads nothing from another host — no Google Fonts, no CDNs, no analytics.
 
-- `services.json` — the services I own, shown under "Services I Own". One entry per service: `domain`, `nameEn`, `nameFa`, `nameAr`, `descriptionEn`, `descriptionFa`, `descriptionAr`. No screenshots: the list is text only, and any language without its own field falls back to English.
+- `services.json` — the services I own, shown under "Services I Own". Maintained by hand, one entry per service: `url` (a full `https://` address, a path is fine), `nameEn`, `nameFa`, `nameAr`, `descriptionEn`, `descriptionFa`, `descriptionAr`. No screenshots: the list is text only, and any language without its own field falls back to English.
 - `i18n/en.json`, `i18n/fa.json`, `i18n/ar.json` — every string on the page, including the skill tag lists (which are arrays) and the `aria-label`s; the header switcher picks one and remembers it. English is the default and the copy baked into `index.html`.
 - `data/open-source.json` — the repository list, with `descriptionFa` / `descriptionAr` kept by name across refreshes.
 - `node tools/refresh-data.mjs` — snapshots my GitHub repos and cross-checks `services.json` against apps.webiro.ir (run before a push when I want fresh stars/descriptions).
