@@ -16,7 +16,7 @@
   <br>
   <a href="https://instagram.com/pedramgholizadeh"><img src="https://img.shields.io/badge/Instagram-@pedramgholizadeh-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
   <a href="https://www.youtube.com/@pedramgholizadeh"><img src="https://img.shields.io/badge/YouTube-@pedramgholizadeh-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" /></a>
-  <a href="mailto:pedram@skiff.com"><img src="https://img.shields.io/badge/Email-pedram%40skiff.com-8B5CF6?style=for-the-badge&logo=minutemailer&logoColor=white" alt="Email" /></a>
+  <a href="mailto:pedramgholizadeh@gmail.com"><img src="https://img.shields.io/badge/Email-pedram%40skiff.com-8B5CF6?style=for-the-badge&logo=minutemailer&logoColor=white" alt="Email" /></a>
 </div>
 
 ---
@@ -32,7 +32,7 @@
 | 🌍 | Based in **IRAN** · 10+ years of experience · clients worldwide |
 | 🦾 | Big believer in **open-source**, dedicated to **internet freedom** & **free expression** |
 | 🌱 | Currently learning **Everything :D** |
-| 📫 | **pedram@skiff.com** · Telegram **@pedramgholizadeh** · 📱 **0912 089 4404** |
+| 📫 | **pedramgholizadeh@gmail.com** · Telegram **@pedramgholizadeh** · 📱 **0912 089 4404** |
 | ☕ | Buy me a coffee → [daramet.com/pedram](https://daramet.com/pedram) |
 | ⚡ | Fun fact: **there is NO fun fact about my life :)** |
 
@@ -146,7 +146,7 @@
 **"Let's make your brand brilliant!"** — if you'd like to work together or just say hi, I'd love to hear from you.
 
 <a href="https://t.me/pedramgholizadeh"><img src="https://img.shields.io/badge/Telegram-DM_me-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram" /></a>
-<a href="mailto:pedram@skiff.com"><img src="https://img.shields.io/badge/Email-pedram%40skiff.com-8B5CF6?style=flat-square&logo=minutemailer&logoColor=white" alt="Email" /></a>
+<a href="mailto:pedramgholizadeh@gmail.com"><img src="https://img.shields.io/badge/Email-pedram%40skiff.com-8B5CF6?style=flat-square&logo=minutemailer&logoColor=white" alt="Email" /></a>
 <a href="https://www.linkedin.com/in/pedramgholizadeh"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 
 </div>
