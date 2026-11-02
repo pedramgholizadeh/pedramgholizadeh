@@ -16,7 +16,7 @@
   <br>
   <a href="https://instagram.com/pedramgholizadeh"><img src="https://img.shields.io/badge/Instagram-@pedramgholizadeh-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
   <a href="https://www.youtube.com/@pedramgholizadeh"><img src="https://img.shields.io/badge/YouTube-@pedramgholizadeh-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" /></a>
-  <a href="mailto:pedramgholizadeh@gmail.com"><img src="https://img.shields.io/badge/Email-pedram%40skiff.com-8B5CF6?style=for-the-badge&logo=minutemailer&logoColor=white" alt="Email" /></a>
+  <a href="mailto:pedramgholizadeh@gmail.com"><img src="https://img.shields.io/badge/Email-pedramgholizadeh%40gmail.com-8B5CF6?style=for-the-badge&logo=minutemailer&logoColor=white" alt="Email" /></a>
 </div>
 
 ---
