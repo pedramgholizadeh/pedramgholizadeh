@@ -58,7 +58,9 @@ for (const f of files) {
   const paths = [...raw.matchAll(/<path[^>]*\sd="([^"]+)"/g)].map((m) => m[1]);
   out += `  ICON[${JSON.stringify(name)}] = [${paths.map((d) => JSON.stringify(d)).join(",")}];\n`;
 }
-out +=
-  '  g.ICON = ICON;\n  g.icon = function (name, cls) { var p = ICON[name] || []; return \'<svg class="mi \' + (cls || "") + \'" viewBox="0 -960 960 960" aria-hidden="true">\' + p.map(function (d) { return \'<path d="\' + d + \'"/>\'; }).join("") + "</svg>"; };\n})(window);\n";
+out += `  g.ICON = ICON;
+  g.icon = function(name, cls){ var p = ICON[name] || []; return '<svg class="mi ' + (cls||"") + '" viewBox="0 -960 960 960" aria-hidden="true">' + p.map(function(d){ return '<path d="' + d + '"/>'; }).join("") + '</svg>'; };
+})(window);
+`;
 fs.writeFileSync(path.join(moduleDir, "icons.js"), out);
 console.log(`modules/icons.js — ${files.length} icons`);
